@@ -1,0 +1,62 @@
+<mat-sidenav-container class="container" fullscreen>
+  <mat-sidenav #sidenav class="sideMenu" mode="push">
+    <div class="topCloseMenu">
+      <button class="noCssBtn" (click)="sidenav.close()">
+        <img src="/images/icons/close.png" alt="" class="hvr-buzz">
+      </button>
+    </div>
+    <div class="sideMenuTop">
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/home']" (click)="sidenav.close()"  class="hvr-underline-from-center">HOME</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/photography']" (click)="sidenav.close()" class="hvr-underline-from-center">PHOTOGRAPHY</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/artists']" (click)="sidenav.close()" class="hvr-underline-from-center">ARTISTS</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/music']" (click)="sidenav.close()" class="hvr-underline-from-center">MUSIC</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/food']" (click)="sidenav.close()" class="hvr-underline-from-center">FOOD</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/else']" (click)="sidenav.close()" class="hvr-underline-from-center">!ELSE¡</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCJuuS2dtebtGiL_Cs2ywk3Q" target="_blank" class="hvr-underline-from-center">MEDIA</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/calendar']" (click)="sidenav.close()" class="hvr-underline-from-center">CALENDAR</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/subscribe']" (click)="sidenav.close()" class="hvr-underline-from-center">SUBSCRIBE</a>
+      </li>
+      <li>
+        <a routerLinkActive="active" [routerLink]="['/submit']" (click)="sidenav.close()" class="SubmitButton hvr-underline-from-center">SUBMIT</a>
+      </li>
+    </div>
+    <div class="sideMenuMedia">
+      <a href="https://www.instagram.com/fourteen76/" target="_blank">
+        <img src="/images/icons/insta.png" alt="" class="hvr-shrink">
+      </a>
+      <a href="https://www.facebook.com/fourteen76/" target="_blank">
+        <img src="/images/icons/facebook.png" alt="" class="hvr-shrink">
+      </a>
+    </div>
+  </mat-sidenav>
+  <div class="desktopNav">
+    <div class="navContentLeft">
+      <button type="button" (click)="sidenav.open()">
+        <img src="/images/icons/navigation6.png" alt="" class="navBarLogo hvr-forward">
+      </button>
+    </div>
+    <div class="navContentRight">
+      <a [routerLink]="['/home']">
+        <img src="/images/nav.png" alt="1476pink" class="hvr-shrink"/>
+      </a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
