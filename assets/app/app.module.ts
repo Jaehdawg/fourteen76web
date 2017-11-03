@@ -24,6 +24,13 @@ import {ElseComponent} from './views/Mviews/else.component';
 //posts vvv
 //articles
 import {PerfumeGenius} from './views/posts/articles/perfume.component';
+import {BloodComponent} from './views/posts/articles/blood.component';
+import {UpperRoom} from './views/posts/articles/upperroom.component';
+import {PsychicHotline} from './views/posts/articles/psychic.component';
+import {DeadBalloons} from './views/posts/articles/balloons.component';
+import {SleepDrive} from './views/posts/articles/sleepdrive.component';
+import {MarriageComponent} from './views/posts/articles/marriage.component';
+import {LostSloss} from './views/posts/articles/lostsloss.component';
 
 import {routing} from './app.routes';
 
@@ -40,7 +47,14 @@ import {routing} from './app.routes';
     PhotographyComponent,
     SubmitComponent,
     SubscribeComponent,
-    PerfumeGenius
+    PerfumeGenius,
+    BloodComponent,
+    UpperRoom,
+    PsychicHotline,
+    DeadBalloons,
+    SleepDrive,
+    MarriageComponent,
+    LostSloss
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,14 @@ import {SubscribeComponent} from './views/Mviews/subscribe.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //articles
 import {PerfumeGenius} from './views/posts/articles/perfume.component';
+import {BloodComponent} from './views/posts/articles/blood.component';
+import {UpperRoom} from './views/posts/articles/upperroom.component';
+import {PsychicHotline} from './views/posts/articles/psychic.component';
+import {DeadBalloons} from './views/posts/articles/balloons.component';
+import {SleepDrive} from './views/posts/articles/sleepdrive.component';
+import {MarriageComponent} from './views/posts/articles/marriage.component';
+import {LostSloss} from './views/posts/articles/lostsloss.component';
+
 
 const APP_ROUTES: Routes = [
   {path: '', redirectTo: '/home',  pathMatch: 'full'},
@@ -27,6 +35,17 @@ const APP_ROUTES: Routes = [
   {path: 'subscribe', component: SubscribeComponent},
   //articles
   {path: 'PerfumeGenius', component: PerfumeGenius},
+  {path: 'BloodEquality', component: BloodComponent},
+  {path: 'UpperRoom', component: UpperRoom},
+  {path: 'PsychicHotline', component: PsychicHotline},
+  {path: 'DeadBalloons', component: DeadBalloons},
+  {path: 'SleepDrive', component: SleepDrive},
+  {path: 'Marriage', component: MarriageComponent},
+  {path: 'LostSloss', component: LostSloss},
+
+
+
+
 
 
 ];
