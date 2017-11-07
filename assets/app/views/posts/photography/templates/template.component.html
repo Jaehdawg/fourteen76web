@@ -1,0 +1,9 @@
+<div class="pageContainerPost">
+  <swiper class="swiper" [config]="config">
+       <div class="swiper-wrapper">
+           <img class="swiper-slide" *ngFor="let image of images" [src]="image">
+       </div>
+       <div class="swiper-button-right"><img src="/images/icons/right.png" alt=""></div>
+       <div class="swiper-button-left"><img src="/images/icons/left.png" alt=""></div>
+  </swiper>
+</div>

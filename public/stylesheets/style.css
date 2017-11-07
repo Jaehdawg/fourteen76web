@@ -153,6 +153,89 @@ html, body, material-app, mat-sidenav-container, #container {
   padding-right: 20px;
 }
 /*Menu*/
+/*Calendar Page*/
+.filterContainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  font-family: 'Bree Serif', serif;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.filter {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  min-height: 36px;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+  box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+  min-width: 100px;
+  cursor: pointer;
+}
+.eventContainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 250px;
+  max-width: 300px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+  box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
+}
+.eventTitle {
+  font-family: 'Bree Serif', serif;
+  font-size: 17px;
+  text-align: right;
+  margin-right: 8px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.eventDescription {
+  font-family: 'Alegreya', serif;
+  font-size: 15px;
+  text-align: left;
+}
+.oneContainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.twoContainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.eventVenue, .eventTime, .eventPrice {
+  font-family: 'Bree Serif', serif;
+  color: #8f8f8f;
+  font-size: 15px;
+  margin: 0;
+}
+.eventAddress {
+  font-family: 'Bree Serif', serif;
+  color: #8f8f8f;
+  font-size: 14px;
+  margin: 0;
+}
+.eventDate {
+  color: #000;
+  font-family: 'Bree Serif', serif;
+  font-size: 16px;
+  margin: 0;
+}
 /*Post Grid*/
 .pageContainer {
   padding: 70px;
@@ -302,6 +385,55 @@ html, body, material-app, mat-sidenav-container, #container {
   width: 25px;
 }
 /*Submit Page*/
+/*Image Slider*/
+.slideContainer {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+swiper {
+  max-width: 750px !important;
+  min-height: 518px !important;
+  background: none !important;
+}
+.swiper-button-right {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  right: 0px;
+}
+.swiper-button-left {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  left: 0px;
+}
+.swiper-button-left img, .swiper-button-right img {
+  height: 22px;
+  width: 22px;
+}
+.swiper-slide {
+  text-align: center;
+  max-width: 750px;
+  font-size: 18px;
+  background: #f9f9f9;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+/*Image Slider*/
 /*Posts Template*/
 .pageContainerPost {
   display: -webkit-flex; /* Safari */
@@ -320,7 +452,7 @@ html, body, material-app, mat-sidenav-container, #container {
   justify-content: center;
 }
 .imgcaption {
-  width: 75%;
+  width: 65%;
   align-self: center;
   margin-top: 5px;
   font-family: 'Alegreya', serif;
@@ -336,11 +468,26 @@ html, body, material-app, mat-sidenav-container, #container {
   font-size: 15px;
   font-style: italic;
 }
+.imgcaptionFood {
+  align-self: center;
+  text-align: left;
+  margin-top: 5px;
+  font-family: 'Alegreya', serif;
+  font-size: 16px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .imageSmall {
   width: 70% !important;
 }
 .image img {
   width: 75%;
+}
+.midArticle {
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-direction: row;
+  justify-content: space-around;
 }
 .headImage {
   width: 100%;
@@ -351,6 +498,15 @@ html, body, material-app, mat-sidenav-container, #container {
 }
 .articleImage {
   padding: 30px 0px;
+}
+.articleImageTwo {
+  padding: 30px 0px;
+}
+.articleImageTwo img {
+  width: 99%;
+}
+.articleImage img {
+  width: 75%;
 }
 p a {
   text-decoration: none;
@@ -378,7 +534,7 @@ p a {
 }
 iframe {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   align-self: center;
 }
 .shoutout {
@@ -412,7 +568,7 @@ iframe {
 }
 .head {
   position: relative;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 .head p {
@@ -420,6 +576,10 @@ iframe {
 }
 .writtenby {
   font-size: 14px;
+  margin-bottom: 5px;
+}
+.authorPhoto {
+  font-size: 15px;
   margin-bottom: 5px;
 }
 .titlesContainer {
@@ -436,14 +596,17 @@ iframe {
   font-family: 'Alegreya', serif;
   font-size: 18px;
   text-align: left;
-  margin: 4px 0;
+  margin: 5px 0;
+}
+.centerText {
+  text-align: center;
 }
 .question {
   font-family: 'Bree Serif', serif;
-  font-size: 18px;
+  font-size: 17.5px;
   font-weight: bold;
   text-align: left;
-  margin: 4px 0;
+  margin: 5px 0;
   clear: both;
   position: relative;
   font-style: italic;
@@ -603,6 +766,11 @@ iframe {
 }
 /*hover effects*/
 /*media queries*/
+@media (min-width: 1200px) {
+  .pageContainer {
+    padding: 70px 100px;
+  }
+}
 @media (max-width: 900px){
   .image {
     width: 100%;
