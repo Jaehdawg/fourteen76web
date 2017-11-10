@@ -1,0 +1,97 @@
+<div class="pageContainer">
+  <div class="pageHome">
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/ThomasHall']">
+          <img src="/images/thumbnails/thomas.jpg" alt=""/>
+          <span><p class="name">Thomas Hall</p></span>
+  				<span><p class="category">Photography</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/MilesTwist']">
+          <img src="/images/thumbnails/miles_p.jpg" alt=""/>
+          <span><p class="name">Miles Twist</p></span>
+  				<span><p class="category">Photography</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/YoavPelli']">
+          <img src="/images/thumbnails/yoavp.jpg" alt=""/>
+          <span><p class="name">Yoav Pelli</p></span>
+  				<span><p class="category">Photography</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/EndangeredSpecies']">
+          <img src="/images/thumbnails/endangeredp.jpg" alt=""/>
+          <span><p class="name">Endangered Species</p></span>
+  				<span><p class="category">Josh Ethan Johnson</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/WisconsinWinter']">
+          <img src="/images/thumbnails/calliep.jpg" alt=""/>
+          <span><p class="name">Wisconsin Winter</p></span>
+  				<span><p class="category">Callie Mills</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/LastGeneration']">
+          <img src="/images/thumbnails/last_gen_p.jpg" alt=""/>
+          <span><p class="name">The Last Generation</p></span>
+  				<span><p class="category">Eduardo Urbina</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/ByronSonnierPhotography']">
+          <img src="/images/thumbnails/byronp.jpg" alt=""/>
+          <span><p class="name">Byron Sonnier</p></span>
+  				<span><p class="category">Photography</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/IslaDeMagia']">
+          <img src="/images/thumbnails/islademagiap.jpg" alt=""/>
+          <span><p class="name">Isla De Magia</p></span>
+  				<span><p class="category">Camila Escobar</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows lastrow">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/BrianArnold']">
+          <img src="/images/thumbnails/bryan.jpg" alt=""/>
+          <span><p class="name">Brian Arnold</p></span>
+  				<span><p class="category">Photography</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/FiestaBham']">
+          <img src="/images/thumbnails/fiesta.jpg" alt=""/>
+          <span><p class="name">Fiesta Birmingham '16</p></span>
+  				<span><p class="category">Mateo Montoya</p></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="rows">
+      <div class="pageNav">
+        <a [routerLink]="['/photography']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: unactiveCircle}"></div>
+        </a>
+        <a [routerLink]="['/photography/2']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: activeCircle}"></div>
+        </a>
+        <a [routerLink]="['/photography/3']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: unactiveCircle}"></div>
+        </a>
+      </div>
+  </div>
+</div>

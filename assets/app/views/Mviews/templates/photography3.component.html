@@ -1,0 +1,81 @@
+<div class="pageContainer" #scrollMe>
+  <div class="pageHome">
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/Untitled']">
+          <img src="/images/thumbnails/untitledp.jpg" alt=""/>
+          <span><p class="name">Untitled</p></span>
+  				<span><p class="category">Andrew Dominguez</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/Cyclefest16']">
+          <img src="/images/thumbnails/cyclefestp.jpg" alt=""/>
+          <span><p class="name">Cyclefest '16</p></span>
+  				<span><p class="category">Mateo Montoya</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/Aerius']">
+          <img src="/images/thumbnails/rope.jpg" alt=""/>
+          <span><p class="name">Aerius</p></span>
+  				<span><p class="category">Performance by Jennifer Colvin</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/FashionWeek']">
+          <img src="/images/thumbnails/bfw2p.jpg" alt=""/>
+          <span><p class="name">Fashion Week '16</p></span>
+  				<span><p class="category">Mateo Montoya</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/Skate']">
+          <img src="/images/thumbnails/davidp.jpg" alt=""/>
+          <span><p class="name">Skate</p></span>
+  				<span><p class="category">David Sheetz</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/TwilightChildren']">
+          <img src="/images/thumbnails/christianp.jpg" alt=""/>
+          <span><p class="name">Twilight Children</p></span>
+  				<span><p class="category">Chris Bernsten</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows lastrow">
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/BLMProtest']">
+          <img src="/images/thumbnails/blmp.jpg" alt=""/>
+          <span><p class="name">Black Lives Matter Protest</p></span>
+  				<span><p class="category">Photo Story</p></span>
+        </a>
+      </div>
+      <div class="col six hvr-underline-reveal">
+        <a [routerLink]="['/SkateParkFundraiser']">
+          <img src="/images/thumbnails/skatep.jpg" alt=""/>
+          <span><p class="name">Skate Park Fundraiser</p></span>
+  				<span><p class="category">Mateo Montoya</p></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="rows">
+      <div class="pageNav">
+        <a [routerLink]="['/photography']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: unactiveCircle}"></div>
+        </a>
+        <a [routerLink]="['/photography/2']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: unactiveCircle}"></div>
+        </a>
+        <a [routerLink]="['/photography/3']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: activeCircle}"></div>
+        </a>
+      </div>
+  </div>
+</div>

@@ -12,12 +12,16 @@ import {MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenav
 //main components
 import {AppComponent} from './app.component';
 import {HomeComponent} from './views/Mviews/home.component';
+import {HomeTwoComponent} from './views/Mviews/home2.component';
 import {HeaderComponent} from './navigation/header.component';
 import {ArtistsComponent} from './views/Mviews/artists.component';
+import {ArtistsTwoComponent} from './views/Mviews/artists2.component';
 import {CalendarComponent} from './views/Mviews/calendar.component';
 import {MusicComponent} from './views/Mviews/music.component';
 import {FoodComponent} from './views/Mviews/food.component';
 import {PhotographyComponent} from './views/Mviews/photography.component';
+import {PhotographyTwoComponent} from './views/Mviews/photography2.component';
+import {PhotographyThreeComponent} from './views/Mviews/photography3.component';
 import {SubmitComponent} from './views/Mviews/submit.component';
 import {SubscribeComponent} from './views/Mviews/subscribe.component';
 import {ElseComponent} from './views/Mviews/else.component';
@@ -50,6 +54,32 @@ import {Malverns} from './views/posts/photography/malverns.component';
 import {NoNames} from './views/posts/photography/nonames.component';
 import {Ghouls} from './views/posts/photography/ghouls.component';
 import {Ireland} from './views/posts/photography/ireland.component';
+import {NewYork} from './views/posts/photography/newyork.component';
+import {ThomasHall} from './views/posts/photography/thomashall.component';
+import {MilesTwist} from './views/posts/photography/milestwist.component';
+import {Yoav} from './views/posts/photography/yoav.component';
+import {Endangered} from './views/posts/photography/endangered.component';
+import {Winter} from './views/posts/photography/winter.component';
+import {LastGeneration} from './views/posts/photography/lastgeneration.component';
+import {Byron} from './views/posts/photography/byron.component';
+import {Isla} from './views/posts/photography/isla.component';
+import {Brian} from './views/posts/photography/brian.component';
+import {Fiesta} from './views/posts/photography/fiesta.component';
+import {CycleFest} from './views/posts/photography/cyclefest.component';
+import {Aerius} from './views/posts/photography/aerius.component';
+import {Skate} from './views/posts/photography/skate.component';
+import {Fashion} from './views/posts/photography/fashion.component';
+import {Twilight} from './views/posts/photography/twilight.component';
+import {Blm} from './views/posts/photography/blm.component';
+import {SkateFund} from './views/posts/photography/skatefund.component';
+import {Untitled} from './views/posts/photography/untitled.component';
+import {LaundryPunk} from './views/posts/photography/laundrypunk.component';
+
+//videos
+import {DonGero} from './views/posts/videos/dongero.component';
+import {Boom} from './views/posts/videos/boom.component';
+import {Homeward} from './views/posts/videos/homeward.component';
+import {HeavyUser} from './views/posts/videos/heavyuser.component';
 
 
 @NgModule({
@@ -57,12 +87,16 @@ import {Ireland} from './views/posts/photography/ireland.component';
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    HomeTwoComponent,
     ElseComponent,
     ArtistsComponent,
+    ArtistsTwoComponent,
     CalendarComponent,
     MusicComponent,
     FoodComponent,
     PhotographyComponent,
+    PhotographyTwoComponent,
+    PhotographyThreeComponent,
     SubmitComponent,
     SubscribeComponent,
     PerfumeGenius,
@@ -90,7 +124,31 @@ import {Ireland} from './views/posts/photography/ireland.component';
     Malverns,
     NoNames,
     Ghouls,
-    Ireland
+    Ireland,
+    NewYork,
+    ThomasHall,
+    MilesTwist,
+    Yoav,
+    Endangered,
+    Winter,
+    LastGeneration,
+    Byron,
+    Isla,
+    Brian,
+    Fiesta,
+    CycleFest,
+    Aerius,
+    Skate,
+    Fashion,
+    Twilight,
+    Blm,
+    SkateFund,
+    DonGero,
+    Boom,
+    Homeward,
+    HeavyUser,
+    Untitled,
+    LaundryPunk
   ],
   imports: [
     BrowserModule,

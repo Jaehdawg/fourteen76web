@@ -1,6 +1,5 @@
 <div class="pageContainer" #scrollMe>
-  <!-- PAGE ONE -->
-  <div class="pageHome" *ngIf="page == 'page1'">
+  <div class="pageHome">
     <div class="rows mainRows">
       <div class="col six hvr-underline-reveal">
         <a [routerLink]="['/PerfumeGenius']">
@@ -82,94 +81,13 @@
       </div>
     </div>
   </div>
-  <!-- PAGE TWO -->
-  <div class="pageHome" *ngIf="page == 'page2'">
-    <div class="rows mainRows">
-      <div class="col seven hvr-underline-reveal">
-        <a [routerLink]="['/AmyVaughn']">
-          <img src="/images/thumbnails/amy.jpg" alt=""/>
-          <span><p class="name">Amy Vaughn</p></span>
-  				<span><p class="category">Artist Interview</p></span>
-        </a>
-      </div>
-      <div class="col five hvr-underline-reveal">
-        <a [routerLink]="['/PrideParade']">
-          <img src="/images/thumbnails/prideweek.jpg" alt=""/>
-          <span><p class="name">Pride Parade and Fest</p></span>
-  				<span><p class="category">Photography</p></span>
-        </a>
-      </div>
-    </div>
-    <div class="rows mainRows">
-      <div class="col six hvr-underline-reveal">
-        <a [routerLink]="['/LostLands']">
-          <img src="/images/thumbnails/lostlands.jpg" alt=""/>
-          <span><p class="name">Lost Lands</p></span>
-    			<span><p class="category">Bryan Atkinson</p></span>
-        </a>
-      </div>
-      <div class="col six hvr-underline-reveal">
-        <a [routerLink]="['/CrackerPackers']">
-          <img src="/images/thumbnails/crackerpackers.jpg" alt=""/>
-          <span><p class="name">Cracker Packers</p></span>
-    			<span><p class="category">Matthew MacPake</p></span>
-        </a>
-      </div>
-    </div>
-    <div class="rows mainRows">
-      <div class="col five hvr-underline-reveal">
-        <a [routerLink]="['/RallyAgainstTrump']">
-          <img src="/images/thumbnails/trump.jpg" alt=""/>
-          <span><p class="name">Rally Against Donald Trump</p></span>
-  				<span><p class="category">Mateo Montoya</p></span>
-        </a>
-      </div>
-      <div class="col seven hvr-underline-reveal">
-        <a [routerLink]="['/GumboGala']">
-          <img src="/images/thumbnails/gumbo.jpg" alt=""/>
-          <span><p class="name">Gumbo Gala 2017</p></span>
-          <span><p class="category">Lee Panter</p></span>
-        </a>
-      </div>
-    </div>
-    <div class="rows mainRows">
-      <div class="col seven hvr-underline-reveal">
-        <a [routerLink]="['/MrMarbles']">
-          <img src="/images/thumbnails/mrmarbles.jpg" alt=""/>
-          <span><p class="name">Mr.Marbles</p></span>
-          <span><p class="category">Artist Showcase</p></span>
-        </a>
-      </div>
-      <div class="col five">
-        <img src="/images/thumbnails/vlad.jpg" alt=""/>
-        <span><p class="name" style="color: white">vlad</p></span>
-  			<span><p class="category">Reins Tarpley</p></span>
-      </div>
-    </div>
-    <div class="rows mainRows lastrow">
-      <div class="col five hvr-underline-reveal">
-        <a [routerLink]="['/Princess4Princess']">
-          <img src="/images/thumbnails/princesshome2.jpg" alt=""/>
-          <span><p class="name">PRINCE$$ 4 PRINCE$$</p></span>
-          <span><p class="category">Ahmad Jackson</p></span>
-        </a>
-      </div>
-      <div class="col seven hvr-underline-reveal">
-        <a [routerLink]="['/LewisAndQuasar']">
-          <img src="/images/thumbnails/lewishome.jpg" alt=""/>
-          <span><p class="name">Lewis and Quasar</p></span>
-          <span><p class="category">A Man of the Road</p></span>
-        </a>
-      </div>
-    </div>
-  </div>
   <div class="rows">
       <div class="pageNav">
-        <a>
-          <div class="navCircle" [ngStyle]="{backgroundColor: activityColor1}" (click)="activeCircle1(); pageNav('nav1')"></div>
+        <a [routerLink]="['/home']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: activeCircle}"></div>
         </a>
-        <a>
-          <div class="navCircle" [ngStyle]="{backgroundColor: activityColor2}" (click)="activeCircle2(); pageNav('nav2')"></div>
+        <a [routerLink]="['/home/2']">
+          <div class="navCircle" [ngStyle]="{backgroundColor: unactiveCircle}"></div>
         </a>
       </div>
   </div>
