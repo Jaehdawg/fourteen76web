@@ -32,7 +32,7 @@ export class LostLands implements OnInit {
       '/images/photography/lostlands/four.jpg',
       '/images/photography/lostlands/five.jpg',
       '/images/photography/lostlands/seven.jpg',
-      '/images/photography/lostlands/eight.jpg'
+      '/images/photography/lostlands/eight.jpg',
       '/images/photography/lostlands/nine.jpg',
       '/images/photography/lostlands/ten.jpg',
       '/images/photography/lostlands/eleven.jpg',

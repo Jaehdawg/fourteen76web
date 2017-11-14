@@ -24,9 +24,12 @@ import {PhotographyTwoComponent} from './views/Mviews/photography2.component';
 import {PhotographyThreeComponent} from './views/Mviews/photography3.component';
 import {SubmitComponent} from './views/Mviews/submit.component';
 import {SubscribeComponent} from './views/Mviews/subscribe.component';
+import {SubscribeElement} from './views/Mviews/subscribeElement.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //posts vvv
 //articles
+import {Colour} from './views/posts/articles/colours.component';
+import {Girlpool} from './views/posts/articles/girlpool.component';
 import {PerfumeGenius} from './views/posts/articles/perfume.component';
 import {BloodComponent} from './views/posts/articles/blood.component';
 import {UpperRoom} from './views/posts/articles/upperroom.component';
@@ -74,6 +77,27 @@ import {Blm} from './views/posts/photography/blm.component';
 import {SkateFund} from './views/posts/photography/skatefund.component';
 import {Untitled} from './views/posts/photography/untitled.component';
 import {LaundryPunk} from './views/posts/photography/laundrypunk.component';
+import {Twelve} from './views/posts/photography/twelveweeks.component';
+
+//artists
+import {Merrilee} from './views/posts/artists/merrilee.component';
+import {Amy} from './views/posts/artists/amy.component';
+import {Marbles} from './views/posts/artists/marbles.component';
+import {Caroline} from './views/posts/artists/caroline.component';
+import {William} from './views/posts/artists/william.component';
+import {Sara} from './views/posts/artists/sara.component';
+import {Chris} from './views/posts/artists/chris.component';
+import {Katelyn} from './views/posts/artists/katelyn.component';
+import {Rizzo} from './views/posts/artists/rizzo.component';
+import {Gaijin} from './views/posts/artists/gaijin.component';
+import {Hannah} from './views/posts/artists/hannah.component';
+import {Christina} from './views/posts/artists/christina.component';
+import {Andrea} from './views/posts/artists/andrea.component';
+import {Leah} from './views/posts/artists/leah.component';
+import {Logan} from './views/posts/artists/logan.component';
+import {ByronA} from './views/posts/artists/byron.component';
+import {Lewis} from './views/posts/artists/lewis.component';
+import {Princess} from './views/posts/artists/princess.component';
 
 //videos
 import {DonGero} from './views/posts/videos/dongero.component';
@@ -99,6 +123,7 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     PhotographyThreeComponent,
     SubmitComponent,
     SubscribeComponent,
+    SubscribeElement,
     PerfumeGenius,
     BloodComponent,
     UpperRoom,
@@ -148,7 +173,28 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     Homeward,
     HeavyUser,
     Untitled,
-    LaundryPunk
+    LaundryPunk,
+    Merrilee,
+    Amy,
+    Marbles,
+    Caroline,
+    William,
+    Sara,
+    Chris,
+    Katelyn,
+    Rizzo,
+    Gaijin,
+    Hannah,
+    Christina,
+    Andrea,
+    Leah,
+    Logan,
+    ByronA,
+    Lewis,
+    Princess,
+    Colour,
+    Girlpool,
+    Twelve
   ],
   imports: [
     BrowserModule,

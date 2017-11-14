@@ -32,8 +32,8 @@ export class DieTrying implements OnInit {
       '/images/photography/dietrying/five.jpg',
       '/images/photography/dietrying/six.jpg',
       '/images/photography/dietrying/seven.jpg',
-      '/images/photography/dietrying/eight.jpg'
-      '/images/photography/dietrying/nine.jpg',
+      '/images/photography/dietrying/eight.jpg',
+      '/images/photography/dietrying/nine.jpg'
     ]
   }
 }

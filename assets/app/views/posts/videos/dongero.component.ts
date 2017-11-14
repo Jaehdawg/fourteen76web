@@ -9,6 +9,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 export class DonGero implements OnInit {
   url: SafeResourceUrl;
+  isUrl2: boolean = false;
   constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.url = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/h-qmgYr0VC0");
   }
@@ -33,7 +34,7 @@ export class DonGero implements OnInit {
     description: "don.gero",
     url: "https://www.instagram.com/don.gero/"
   };
-   
+
 
   shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
   shareTwitter = "https://www.facebook.com/fourteen76/";

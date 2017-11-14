@@ -31,7 +31,7 @@ export class PrideParade implements OnInit {
       '/images/photography/pride/five.jpg',
       '/images/photography/pride/six.jpg',
       '/images/photography/pride/seven.jpg',
-      '/images/photography/pride/eight.jpg'
+      '/images/photography/pride/eight.jpg',
       '/images/photography/pride/nine.jpg',
       '/images/photography/pride/ten.jpg',
       '/images/photography/pride/eleven.jpg',
@@ -40,12 +40,12 @@ export class PrideParade implements OnInit {
       '/images/photography/pride/fourteen.jpg',
       '/images/photography/pride/fifteen.jpg',
       '/images/photography/pride/sixteen.jpg',
-      '/images/photography/pride/seventeen.jpg'
+      '/images/photography/pride/seventeen.jpg',
       '/images/photography/pride/eighteen.jpg',
       '/images/photography/pride/nineteen.jpg',
       '/images/photography/pride/twenty.jpg',
       '/images/photography/pride/twentyone.jpg',
-      '/images/photography/pride/twentytwo.jpg',
+      '/images/photography/pride/twentytwo.jpg'
     ]
   }
 }

@@ -452,7 +452,7 @@ swiper {
   justify-content: center;
 }
 .imgcaption {
-  width: 65%;
+  width: 75%;
   align-self: center;
   margin-top: 5px;
   font-family: 'Alegreya', serif;
@@ -575,7 +575,7 @@ iframe {
 .head {
   position: relative;
   margin-top: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .head p {
   padding: 0;
@@ -603,6 +603,10 @@ iframe {
   font-size: 18px;
   text-align: left;
   margin: 5px 0;
+}
+.answers span {
+  font-size: 17px;
+  font-family: 'Bree Serif', serif;
 }
 .centerText {
   text-align: center;
@@ -637,6 +641,70 @@ iframe {
   margin-right: 10px;
   margin-top: 10px;
 }
+/*Subscribe Element*/
+.subscribeElementContainer {
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribeElementContainer p {
+  font-family: 'Bree Serif', serif;
+  font-size: 25px;
+  color: #000;
+}
+.subscribeElementContainer form {
+  min-width: 100%;
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subscribeElementContainer form input {
+  width: 80%;
+  height: 25px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 15px;
+  margin-bottom: 22px;
+  padding: 3px;
+  color: #000;
+  border: 1px solid rgba(69, 69, 69, 0.3);
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  -moz-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  background-color: #fff;
+}
+.subscribeElementContainer form input:focus {
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  outline: none;
+}
+.subscribeElementContainer form button {
+  background-color: #000;
+  min-height: 25px;
+  font-size: 13px;
+  color: #fff;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-family: 'Bree Serif', serif;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  -moz-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+}
+.subscribeElementContainer form button:focus {
+ outline: none;
+}
+.subscribePost form input {
+    width: 90%;
+    margin-bottom: 10px;
+}
+/*Subscribe Element*/
 /*hover effects*/
 .hvr-shrink {
   display: inline-block;

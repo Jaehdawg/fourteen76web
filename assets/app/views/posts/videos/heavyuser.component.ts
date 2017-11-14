@@ -9,12 +9,16 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 export class HeavyUser implements OnInit {
   url: SafeResourceUrl;
+  isUrl2: boolean = false;
   constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.url = sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/_vBwLfwbfJo");
   }
 
   postTitle = 'Heavy User';
   postSubtitle = "Live at Glen Iris Laundry";
+  isDescription: boolean = false;
+  isSocial: boolean = false;
+
 
   shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
   shareTwitter = "https://www.facebook.com/fourteen76/";

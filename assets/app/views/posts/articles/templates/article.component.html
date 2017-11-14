@@ -1,0 +1,66 @@
+<div class="pageContainerPost">
+  <div class="headImage" *ngIf="ispostImage">
+    <div class="image">
+      <img src={{postImage}} alt="">
+      <p class="imgcaption" *ngIf="isimageCaption">{{imageCaption}}</p>
+    </div>
+  </div>
+  <div class="article">
+    <div class="rows head">
+      <div class="colPost six titlesContainer">
+        <p class="title" *ngIf="ispostTitle">{{postTitle}}</p>
+        <p class="writtenby" *ngIf="ispostSubtitle">{{postSubtitle}}</p>
+        <p class="writtenby" *ngIf="ispostSubtitlePhoto">{{postSubtitlePhoto}}</p>
+      </div>
+      <div class="colPost six shareon">
+        <span><p>Share</p></span>
+        <a href="" class="hvr-buzz"><img src="/images/icons/facebook.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/google.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/reddit.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/twitter.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/emails.png" alt=""></a>
+      </div>
+    </div>
+    <div class="isHeading" *ngIf="isdescriptionHeading">
+      <p class="question" *ngFor="let head of descriptionHeading">{{head}}</p>
+    </div>
+    <div class="preQHead" *ngIf="ispreQIntro">
+      <p class="answers" *ngFor="let preQ of preQIntro">{{preQ}}</p>
+    </div>
+    <div class="blockOne" *ngIf="isqa1">
+      <div class="questionBlock" *ngFor="let q of qa1">
+        <p class="question" *ngIf="q.q">{{q.q}}</p>
+        <p class="answers" *ngIf="q.a">{{q.a}}</p>
+        <p class="answers" *ngIf="q.a2">{{q.a2}}</p>
+        <p class="answers" *ngIf="q.a3">{{q.a3}}</p>
+        <p class="answers" *ngIf="q.a4">{{q.a4}}</p>
+      </div>
+    </div>
+    <p class="answers centerText" *ngIf="isphotoDescription">{{photoDescription}}</p>
+    <div class="slideContainer" *ngIf="images">
+      <swiper class="swiper" [config]="config">
+           <div class="swiper-wrapper">
+               <img class="swiper-slide" *ngFor="let image of images" [src]="image">
+           </div>
+           <div class="swiper-button-right"><img src="/images/icons/right.png" alt=""></div>
+           <div class="swiper-button-left"><img src="/images/icons/left.png" alt=""></div>
+      </swiper>
+    </div>
+    <div class="blockTwo" *ngIf="isqa2">
+      <div class="questionBlock" *ngFor="let q of qa2">
+        <p class="question" *ngIf="q.q">{{q.q}}</p>
+        <p class="answers" *ngIf="q.a">{{q.a}}</p>
+        <p class="answers" *ngIf="q.a2">{{q.a2}}</p>
+        <p class="answers" *ngIf="q.a3">{{q.a3}}</p>
+      </div>
+    </div>
+    <div class="shoutout" *ngIf="issocial">
+      <div class="socialBlock" *ngFor="let social of socials">
+        <a class="hvr-shrink" href={{social.url}} target="_blank">
+          <img src={{social.img}} alt="">
+          <p>{{social.description}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

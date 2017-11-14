@@ -9,6 +9,7 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 export class Homeward implements OnInit {
   url: SafeResourceUrl;
+  isUrl2: boolean = false;
   constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.url = sanitizer.bypassSecurityTrustResourceUrl("https://youtube.com/embed/E7RcwDF3XoU");
   }

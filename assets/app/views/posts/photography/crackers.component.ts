@@ -34,7 +34,7 @@ export class CrackerPackers implements OnInit {
       '/images/photography/crackerpackers/four.jpg',
       '/images/photography/crackerpackers/five.jpg',
       '/images/photography/crackerpackers/seven.jpg',
-      '/images/photography/crackerpackers/eight.jpg'
+      '/images/photography/crackerpackers/eight.jpg',
       '/images/photography/crackerpackers/nine.jpg',
       '/images/photography/crackerpackers/ten.jpg',
       '/images/photography/crackerpackers/eleven.jpg'

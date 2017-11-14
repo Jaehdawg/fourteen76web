@@ -7,9 +7,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
+var emailRoutes = require('./routes/email');
 
 var app = express();
-//mongoose.connect();
+mongoose.connect('mongodb://test:test@ds255715.mlab.com:55715/1476-emails', {useMongoClient: true});
 
 //view engine set up
 //tells express app where we keep out views and which view engine
@@ -43,6 +44,7 @@ app.use(function (req, res, next) {
 // app.use('/message', messagesRoutes);
 // app.use('/user', userRoutes);
 app.use('/', appRoutes);
+app.use('/subscribe', emailRoutes);
 
 // catch 404 and forward to error handler
 //not adding an err callback allows for angular and node to find the routes in the app.routing.ts file

@@ -16,6 +16,8 @@ import {SubscribeComponent} from './views/Mviews/subscribe.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //articles
 import {PerfumeGenius} from './views/posts/articles/perfume.component';
+import {Colour} from './views/posts/articles/colours.component';
+import {Girlpool} from './views/posts/articles/girlpool.component';
 import {BloodComponent} from './views/posts/articles/blood.component';
 import {UpperRoom} from './views/posts/articles/upperroom.component';
 import {PsychicHotline} from './views/posts/articles/psychic.component';
@@ -62,6 +64,27 @@ import {Blm} from './views/posts/photography/blm.component';
 import {SkateFund} from './views/posts/photography/skatefund.component';
 import {Untitled} from './views/posts/photography/untitled.component';
 import {LaundryPunk} from './views/posts/photography/laundrypunk.component';
+import {Twelve} from './views/posts/photography/twelveweeks.component';
+
+//artists
+import {Merrilee} from './views/posts/artists/merrilee.component';
+import {Amy} from './views/posts/artists/amy.component';
+import {Marbles} from './views/posts/artists/marbles.component';
+import {Caroline} from './views/posts/artists/caroline.component';
+import {William} from './views/posts/artists/william.component';
+import {Sara} from './views/posts/artists/sara.component';
+import {Chris} from './views/posts/artists/chris.component';
+import {Katelyn} from './views/posts/artists/katelyn.component';
+import {Rizzo} from './views/posts/artists/rizzo.component';
+import {Gaijin} from './views/posts/artists/gaijin.component';
+import {Hannah} from './views/posts/artists/hannah.component';
+import {Christina} from './views/posts/artists/christina.component';
+import {Andrea} from './views/posts/artists/andrea.component';
+import {Leah} from './views/posts/artists/leah.component';
+import {Logan} from './views/posts/artists/logan.component';
+import {ByronA} from './views/posts/artists/byron.component';
+import {Lewis} from './views/posts/artists/lewis.component';
+import {Princess} from './views/posts/artists/princess.component';
 
 //videos
 import {DonGero} from './views/posts/videos/dongero.component';
@@ -100,6 +123,9 @@ const APP_ROUTES: Routes = [
   {path: 'Zyp', component: ZypComponent},
   {path: 'Heirloom', component: HeirloomComponent},
   {path: 'StreetSoul', component: CarrigansComponent},
+  {path: 'LivingColour', component: Colour},
+  {path: 'Girlpool', component: Girlpool},
+
   //Photography
   {path: 'BikeJoustV', component: BikeJoust},
   {path: 'Gon', component: Gon},
@@ -134,12 +160,33 @@ const APP_ROUTES: Routes = [
   {path: 'SkateParkFundraiser', component: SkateFund},
   {path: 'Untitled', component: Untitled},
   {path: 'LaundryPunk', component: LaundryPunk},
+  {path: 'TwelveWeeks', component: Twelve},
+
+  //artists
+  {path: 'MerrileeChalliss', component: Merrilee},
+  {path: 'AmyVaughn', component: Amy},
+  {path: 'MrMarbles', component: Marbles},
+  {path: 'CarolineErb', component: Caroline},
+  {path: 'WilliamWebb', component: William},
+  {path: 'SarahRehmert', component: Sara},
+  {path: 'CDSacco', component: Chris},
+  {path: 'Rizzo', component: Rizzo},
+  {path: 'GaijinX', component: Gaijin},
+  {path: 'HannahBarrett', component: Hannah},
+  {path: 'ChristinaDaniel', component: Christina},
+  {path: 'AndreaReally', component: Andrea},
+  {path: 'LeahThornton', component: Leah},
+  {path: 'LoganTanner', component: Logan},
+  {path: 'ByronSonnier', component: ByronA},
+  {path: 'LewisAndQuasar', component: Lewis},
+  {path: 'Princess4Princess', component: Princess},
 
   //videos
   {path: 'DonGero', component: DonGero},
   {path: 'Boom', component: Boom},
   {path: 'HomewardBound', component: Homeward},
   {path: 'HeavyUser', component: HeavyUser},
+  {path: 'KatelynLedford', component: Katelyn},
 
 
 
