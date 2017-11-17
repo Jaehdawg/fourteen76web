@@ -1,0 +1,40 @@
+<!-- <div class="subscribeElementContainer">
+  <p class="subscribeElementHeading">Keep Up With Fourteen76</p>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <input type="email" id="content" name="email">
+    <button type="submit" class="subscribeButton">Subscribe</button>
+  </form>
+</div> -->
+  <div class="subscribeElementContainer">
+    <div class="closePopup">
+      <button type="button" (click)="backClicked()">
+        <img src="/images/icons/closex.png" alt="" class="navBarLogo hvr-buzz">
+      </button>
+    </div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <label for="email">Sign up to receive our (infrequent) newsletter</label>
+        <input
+        type="email"
+        id="email"
+        class="form-control"
+        ngModel
+        placeholder={{emailPlaceholder}}
+        name="email"
+        required>
+      <button type="submit" class="hvr-shrink">SUBSCRIBE</button>
+    </form>
+    <div class="subfollowus">
+      <p>Follow Us</p>
+      <div class="subsocial">
+        <a href="https://www.instagram.com/fourteen76/" target="_blank">
+          <img src="/images/icons/instaw.png" alt="" class="hvr-shrink">
+        </a>
+        <a href="https://www.facebook.com/fourteen76/" target="_blank">
+          <img src="/images/icons/facebookw.png" alt="" class="hvr-shrink">
+        </a>
+        <a href="https://www.youtube.com/channel/UCJuuS2dtebtGiL_Cs2ywk3Q" target="_blank">
+          <img src="/images/icons/youtubew.png" alt="" class="hvr-shrink">
+        </a>
+      </div>
+    </div>
+  </div>

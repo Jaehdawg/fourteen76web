@@ -1,14 +1,24 @@
 var express = require('express');
 var router = express.Router();
-var Email = require('../models/email');
+var User = require('../models/email');
 
-router.post('/subscribe', function(req, res, next){
-  var email = req.body.email;
-  var user = new Email({
-    email: email
+router.post('/', function(req, res, next){
+  useremail = req.body.email;
+  var user = new User({
+    email: useremail
   });
-  user.save();
-  res.redirect('/');
+  user.save(function(err, result){
+    if(err) {
+      return res.status(500).json({
+        title: 'An Error Occurred',
+        error: err
+      });
+    }
+    res.status(201).json({
+      message: 'Saved Email',
+      obj: result
+    });
+  });
 });
 
 module.exports = router;

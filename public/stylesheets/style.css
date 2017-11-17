@@ -60,7 +60,7 @@ html, body, material-app, mat-sidenav-container, #container {
   -webkit-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
   -moz-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
   box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
-  z-index: 999;
+  z-index: 990;
   top: 0;
   left: 0;
 }
@@ -642,17 +642,37 @@ iframe {
   margin-top: 10px;
 }
 /*Subscribe Element*/
+.closePopup {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+.closePopup img {
+  height: 30px;
+  width: 30px;
+}
+.closePopup button {
+  background: none;
+  border: none;
+  outline: none;
+}
 .subscribeElementContainer {
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #f2b1bd;
   display: flex;
   display: -webkit-flex; /* Safari */
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.subscribeElementContainer p {
+.subscribeElementContainer label {
   font-family: 'Bree Serif', serif;
-  font-size: 25px;
-  color: #000;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 .subscribeElementContainer form {
   min-width: 100%;
@@ -661,48 +681,92 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
-.subscribeElementContainer form input {
-  width: 80%;
-  height: 25px;
+.subscribeElementContainer input[type="email"] {
+  width: 60%;
+  height: 35px;
   text-align: center;
   font-family: "Bree Serif", serif;
-  font-size: 15px;
+  font-size: 17px;
+  margin-top: 10px;
   margin-bottom: 22px;
   padding: 3px;
-  color: #000;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #fff;
+  background: rgba(0, 0, 0, 0);
+  outline: none;
+  /*border: 1px solid rgba(69, 69, 69, 0.3);
+  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  -moz-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
+  background-color: #fff;*/
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: white;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  opacity: 1;
+}
+input, select, textarea,{
+    color: #fff !important;
+}
+/*.subscribeElementContainer form input:focus {
+  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  -moz-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
+  outline: none;
+}*/
+.subscribeElementContainer form button {
   border: 1px solid rgba(69, 69, 69, 0.3);
   -webkit-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
   -moz-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
   box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
   background-color: #fff;
-}
-.subscribeElementContainer form input:focus {
-  -webkit-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
-  -moz-box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
-  box-shadow: inset 0px 0px 5px 0px rgba(242,177,189,1);
-  outline: none;
-}
-.subscribeElementContainer form button {
-  background-color: #000;
-  min-height: 25px;
-  font-size: 13px;
-  color: #fff;
+  border-radius: 10px;
+  min-height: 35px;
+  font-size: 17px;
+  color: #f2b1bd;
   padding: 6px;
   margin-bottom: 10px;
   font-family: 'Bree Serif', serif;
-  border-radius: 10px;
+  outline: none;
   border: none;
-  -webkit-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
-  -moz-box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
-  box-shadow: inset 0px 0px 2px 0px rgba(184,184,184,1);
 }
 .subscribeElementContainer form button:focus {
  outline: none;
 }
-.subscribePost form input {
-    width: 90%;
-    margin-bottom: 10px;
+.subfollowus {
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.subfollowus p {
+  color: #fff;
+  font-family: "Bree Serif", serif;
+  font-size: 25px;
+}
+.subfollowus img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.subsocial {
+  display: flex;
+  display: -webkit-flex; /* Safari */
+  flex-direction: row;
+  justify-content: center;
 }
 /*Subscribe Element*/
 /*hover effects*/
@@ -872,7 +936,7 @@ iframe {
     padding-left: 0;
   }
   .pageContainer {
-    padding: 55px 10px;
+    /*padding: 55px 10px;*/
   }
   .imageSmall {
     width: 100% !important;

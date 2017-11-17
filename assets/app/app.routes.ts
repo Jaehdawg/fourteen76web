@@ -12,7 +12,7 @@ import {PhotographyComponent} from './views/Mviews/photography.component';
 import {PhotographyTwoComponent} from './views/Mviews/photography2.component';
 import {PhotographyThreeComponent} from './views/Mviews/photography3.component';
 import {SubmitComponent} from './views/Mviews/submit.component';
-import {SubscribeComponent} from './views/Mviews/subscribe.component';
+import {SubscribeComponent} from './subscribe/subscribe.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //articles
 import {PerfumeGenius} from './views/posts/articles/perfume.component';

@@ -2,13 +2,16 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import {routing} from './app.routes';
 import { SwiperModule } from 'angular2-useful-swiper';
 //unlocks http service
-// import {HttpModule} from '@angular/http';
+import {HttpModule} from '@angular/http';
 
 import {MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule} from '@angular/material';
+
+//services
+import {EmailService} from './views/Mviews/email.service';
+
 //main components
 import {AppComponent} from './app.component';
 import {HomeComponent} from './views/Mviews/home.component';
@@ -23,8 +26,8 @@ import {PhotographyComponent} from './views/Mviews/photography.component';
 import {PhotographyTwoComponent} from './views/Mviews/photography2.component';
 import {PhotographyThreeComponent} from './views/Mviews/photography3.component';
 import {SubmitComponent} from './views/Mviews/submit.component';
-import {SubscribeComponent} from './views/Mviews/subscribe.component';
-import {SubscribeElement} from './views/Mviews/subscribeElement.component';
+import {SubscribeComponent} from './subscribe/subscribe.component';
+import {SubscribeElement} from './subscribe/subscribeElement.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //posts vvv
 //articles
@@ -198,6 +201,7 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     routing,
     FormsModule,
     ReactiveFormsModule,

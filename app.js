@@ -10,28 +10,20 @@ var appRoutes = require('./routes/app');
 var emailRoutes = require('./routes/email');
 
 var app = express();
-mongoose.connect('mongodb://test:test@ds255715.mlab.com:55715/1476-emails', {useMongoClient: true});
+mongoose.connect('mongodb://correoman:postal@ds157380.mlab.com:57380/correos', {useMongoClient: true});
 
-//view engine set up
-//tells express app where we keep out views and which view engine
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-//favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-
-//tells you which folder is accesible everywhere (form internet) all the other ones are purely server side
-//the static commands indicated that this folder holds the static content of our app
-//(this public folder is the folder serving our application)
 app.use(express.static(path.join(__dirname, 'public')));
 
-//middleware preventing request from somewhere other than server
-//these headers prevent problems when the server side code and front-end code are hosted on different servers
-//they allow such a "double server" set up
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -39,16 +31,12 @@ app.use(function (req, res, next) {
     next();
 });
 
-//forwards any req to appRoutes variable (app.js file in routes folder)
-//putting message first allows every request to go through it first than to appRoutes
-// app.use('/message', messagesRoutes);
-// app.use('/user', userRoutes);
-app.use('/', appRoutes);
+//this /messages goes first since we want to handle specific req first before other routes try to
 app.use('/subscribe', emailRoutes);
+//this pretty much tells the app to use messages.js for routes when at /message
+app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
-//not adding an err callback allows for angular and node to find the routes in the app.routing.ts file
-//the err would prevent angular from "catching" the route before the err is returned/rendered
 app.use(function (req, res, next) {
     return res.render('index');
 });

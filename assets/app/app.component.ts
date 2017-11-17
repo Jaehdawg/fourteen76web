@@ -1,20 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import 'rxjs/add/operator/filter';
+import { Component} from '@angular/core';
+import {EmailService} from './subscribe/email.service';
 
 @Component ({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [EmailService]
 })
 
-export class AppComponent implements OnInit {
-  constructor(private router: Router) { }
-  ngOnInit(){
-    this.router.events.filter(event => event instanceof NavigationEnd)
-    .subscribe(() => {
-      const mainDiv = document.getElementById('container');
-      mainDiv.scrollTop = 0;
-    });
-  }
+export class AppComponent {
 
 }
