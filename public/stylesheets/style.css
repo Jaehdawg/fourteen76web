@@ -396,7 +396,6 @@ html, body, material-app, mat-sidenav-container, #container {
 }
 swiper {
   max-width: 750px !important;
-  min-height: 518px !important;
   background: none !important;
 }
 .swiper-button-right {
@@ -673,6 +672,7 @@ iframe {
   font-size: 20px;
   margin-bottom: 10px;
   color: #fff;
+  text-align: center;
 }
 .subscribeElementContainer form {
   min-width: 100%;
@@ -921,10 +921,13 @@ input, select, textarea,{
 
 }*/
 @media (max-width: 763px) {
-  .col{
+  .col {
     width: 100% !important;
     margin: 10px 0px !important;
     margin-bottom: 15px;
+  }
+  .pageContainerPost {
+    padding: 50px 0px;
   }
   .colPost{
     width: 100% !important;
@@ -936,17 +939,21 @@ input, select, textarea,{
     padding-left: 0;
   }
   .pageContainer {
-    /*padding: 55px 10px;*/
+    padding: 55px 15px;
+  }
+  .headImage {
+    margin-top: 25px;
   }
   .imageSmall {
     width: 100% !important;
   }
   .image img {
-    max-width: 100%;
+    width: 100% ;
   }
   .article {
     padding-left: 10px;
     padding-right: 10px;
+    width: 95%;
   }
   .colPost p {
     text-align: center !important;
@@ -956,6 +963,27 @@ input, select, textarea,{
   }
   .writtenby {
     margin-bottom: 10px;
+  }
+  swiper {
+    width: 100% !important;
+    /*min-height: 518px !important;*/
+    background: none !important;
+  }
+  .swiper-button-right, .swiper-button-left {
+    display: none;
+  }
+  iframe {
+    width: 550px;
+    height: 309px;
+  }
+  .shoutout a {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 500px) {
+  iframe {
+    width: 320px;
+    height: 180px;
   }
 }
 /*media quieries*/
