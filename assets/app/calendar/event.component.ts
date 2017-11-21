@@ -12,7 +12,7 @@ export class EventComponent implements AfterContentChecked {
 
 
   eventBorder= "#fffff";
-  iseventBorder = "2px solid";
+  iseventBorder = "3px solid";
   messageType: string = "";
   ngAfterContentChecked() {
     this.messageType = this.message.type;

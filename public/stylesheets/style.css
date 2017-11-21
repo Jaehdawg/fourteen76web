@@ -190,7 +190,7 @@ html, body, material-app, mat-sidenav-container, #container {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .filterContainer button {
   width: 25%;
@@ -828,8 +828,8 @@ input, select, textarea,{
   transition-property: transform;
 }
 .hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
-  -webkit-transform: scale(0.97);
-  transform: scale(0.97);
+  -webkit-transform: scale(0.99);
+  transform: scale(0.99);
 }
 /* Underline Reveal */
 .hvr-underline-reveal {
@@ -992,7 +992,7 @@ input, select, textarea,{
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #f96161;
+  background: #f2b1bd;
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;

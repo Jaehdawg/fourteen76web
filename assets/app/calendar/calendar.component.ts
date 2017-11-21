@@ -12,22 +12,6 @@ export class CalendarComponent implements OnInit {
 
   constructor(private messageService: EventService) {}
 
-
-  filterOneColor = '#fffff';
-
-  filterOne(){
-    this.filterOneColor = "e1f7d5";
-  }
-  filterTwo(){
-
-  }
-  filterThre(){
-
-  }
-  filterFour(){
-
-  }
-
   ngOnInit() {
         this.messageService.getMessages()
             .subscribe(
