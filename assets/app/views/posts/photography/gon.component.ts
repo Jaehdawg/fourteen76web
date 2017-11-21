@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-gon',
-  templateUrl: './templates/gon.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Gon implements OnInit {
@@ -15,13 +15,20 @@ export class Gon implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = true;
+  issocial: boolean = false;
+
   postTitle = "'Gon";
   postSubtitle = "Jonathan Patrick";
-  postDescriptionOne = "Taken in Oregon during the summer of 2016. A typically American foray through the monolithic beauty in this land. Some of the life captured in these shots has suffered severe damage due to forest fires in the past week, namely those of the Columbia River Gorge. Amidst wildfires on the west coast, Hurricane Harvey, other forecasted natural catastrophes, and the ruling political party actively denying the proven science of climate change, one could ask, will the American road trip remain so typical when there's nothing left to see?";
-  postDescriptionTwo = "Regardless of whether a freak teenager fireworks accident or climate change is to blame, both cases point to the same collective negligence of an environment dwindling brightly before our eyes. See it while you can and then die. It's either that or do something about it.";
 
+  description = [
+    "Taken in Oregon during the summer of 2016. A typically American foray through the monolithic beauty in this land. Some of the life captured in these shots has suffered severe damage due to forest fires in the past week, namely those of the Columbia River Gorge. Amidst wildfires on the west coast, Hurricane Harvey, other forecasted natural catastrophes, and the ruling political party actively denying the proven science of climate change, one could ask, will the American road trip remain so typical when there's nothing left to see?",
+    "Regardless of whether a freak teenager fireworks accident or climate change is to blame, both cases point to the same collective negligence of an environment dwindling brightly before our eyes. See it while you can and then die. It's either that or do something about it."
+  ]
 
- constructor(private titleService: Title) { }
+  constructor(private titleService: Title) { }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);

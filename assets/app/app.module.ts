@@ -9,9 +9,6 @@ import {HttpModule} from '@angular/http';
 
 import {MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule} from '@angular/material';
 
-//services
-import {EmailService} from './views/Mviews/email.service';
-
 //main components
 import {AppComponent} from './app.component';
 import {HomeComponent} from './views/Mviews/home.component';
@@ -19,7 +16,8 @@ import {HomeTwoComponent} from './views/Mviews/home2.component';
 import {HeaderComponent} from './navigation/header.component';
 import {ArtistsComponent} from './views/Mviews/artists.component';
 import {ArtistsTwoComponent} from './views/Mviews/artists2.component';
-import {CalendarComponent} from './views/Mviews/calendar.component';
+import {CalendarComponent} from './calendar/calendar.component';
+import {EventComponent} from './calendar/event.component';
 import {MusicComponent} from './views/Mviews/music.component';
 import {FoodComponent} from './views/Mviews/food.component';
 import {PhotographyComponent} from './views/Mviews/photography.component';
@@ -119,6 +117,7 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     ArtistsComponent,
     ArtistsTwoComponent,
     CalendarComponent,
+    EventComponent,
     MusicComponent,
     FoodComponent,
     PhotographyComponent,

@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-blm',
-  templateUrl: './templates/blm.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Blm implements OnInit {
@@ -14,6 +15,11 @@ export class Blm implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Black Lives Matter Birmingham";
   postSubtitle = "Mateo Montoya";

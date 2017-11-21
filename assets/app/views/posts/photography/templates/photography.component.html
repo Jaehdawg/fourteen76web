@@ -1,0 +1,39 @@
+<div class="pageContainerPost">
+  <div class="article">
+    <div class="rows head">
+      <div class="colPost six titlesContainer">
+        <p class="title" *ngIf="ispostTitle">{{postTitle}}</p>
+        <p class="writtenby" *ngIf="ispostSubtitle">{{postSubtitle}}</p>
+      </div>
+      <div class="colPost six shareon">
+        <span><p>Share</p></span>
+        <a href="" class="hvr-buzz"><img src="/images/icons/facebook.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/google.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/reddit.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/twitter.png" alt=""></a>
+        <a href="" class="hvr-buzz"><img src="/images/icons/emails.png" alt=""></a>
+      </div>
+    </div>
+    <div class="photoDesc" *ngIf="isphotoDescription">
+      <p class="answers centerText" *ngFor="let desc of description">{{desc}}</p>
+    </div>
+    <div class="slideContainer" *ngIf="images">
+      <swiper class="swiper" [config]="config">
+           <div class="swiper-wrapper">
+               <img class="swiper-slide" *ngFor="let image of images" [src]="image">
+           </div>
+           <div class="swiper-button-right"><img src="/images/icons/right.png" alt=""></div>
+           <div class="swiper-button-left"><img src="/images/icons/left.png" alt=""></div>
+      </swiper>
+      <p class="sliderCaption">Touchscreen? swipe right or left</p>
+    </div>
+    <div class="shoutout" *ngIf="issocial">
+      <div class="socialBlock" *ngFor="let social of socials">
+        <a class="hvr-shrink" href={{social.url}} target="_blank">
+          <img src={{social.img}} alt="">
+          <p>{{social.description}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

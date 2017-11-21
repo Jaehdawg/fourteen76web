@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-die',
-  templateUrl: './templates/dietrying.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class DieTrying implements OnInit {
@@ -15,12 +15,30 @@ export class DieTrying implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = true;
+  issocial: boolean = true;
+
   postTitle = "DIE TRYING";
   postSubtitle = "sniperstreets";
-  postDescriptionOne = "Zero Skate Team's United States of Whatever summer tour stop, in Birmingham, AL on July 25, 2017. The entire 3 part series can be viewed";
+  description = [
+    "Zero Skate Team's United States of Whatever summer tour stop, in Birmingham, AL on July 25, 2017. The entire 3 part series can be viewed"
+  ]
+  socials = [
+    {
+      description: "sniperstreets.com",
+      url: "https://www.sniperstreets.com/",
+      img: "/images/icons/website.png"
+    },
+    {
+      description: "sniperstreets",
+      url: "https://www.instagram.com/sniperstreets/",
+      img: "/images/icons/insta.png"
+    }
+  ];
 
-
- constructor(private titleService: Title) { }
+  constructor(private titleService: Title) { }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);

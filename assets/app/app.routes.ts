@@ -5,7 +5,7 @@ import {ArtistsComponent} from './views/Mviews/artists.component';
 import {ArtistsTwoComponent} from './views/Mviews/artists2.component';
 import {HomeComponent} from './views/Mviews/home.component';
 import {HomeTwoComponent} from './views/Mviews/home2.component';
-import {CalendarComponent} from './views/Mviews/calendar.component';
+import {CalendarComponent} from './calendar/calendar.component';
 import {MusicComponent} from './views/Mviews/music.component';
 import {FoodComponent} from './views/Mviews/food.component';
 import {PhotographyComponent} from './views/Mviews/photography.component';

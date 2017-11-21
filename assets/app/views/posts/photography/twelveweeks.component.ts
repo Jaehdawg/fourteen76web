@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-twelve',
-  templateUrl: './templates/photo.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Twelve implements OnInit {

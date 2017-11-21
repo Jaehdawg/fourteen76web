@@ -3,7 +3,7 @@ import {Title} from '@angular/platform-browser';
 
 @Component ({
   selector: 'app-gumbo',
-  templateUrl: './templates/gumbo.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Gumbo implements OnInit {
@@ -15,6 +15,11 @@ export class Gumbo implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Gumbo Gala";
   postSubtitle = "Lee Panter"

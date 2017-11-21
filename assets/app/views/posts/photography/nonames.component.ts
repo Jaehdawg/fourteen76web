@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-nonames',
-  templateUrl: './templates/nonames.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class NoNames implements OnInit {
@@ -15,8 +15,26 @@ export class NoNames implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Where The Street Have No Names";
   postSubtitle = "Tyron Hug";
+
+  socials = [
+    {
+      description: 'ahuglife.tumblr',
+      url: 'http://ahuglife.tumblr.com/',
+      img: '/images/icons/website.png'
+    },
+    {
+      description: 't_hug',
+      url: 'https://www.instagram.com/t_hug/',
+      img: '/images/icons/insta.png'
+    }
+  ]
 
  constructor(private titleService: Title) { }
 

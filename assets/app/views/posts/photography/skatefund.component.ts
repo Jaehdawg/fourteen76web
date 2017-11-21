@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-skate',
-  templateUrl: './templates/blm.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class SkateFund implements OnInit {
@@ -14,6 +14,11 @@ export class SkateFund implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Skate Park Fundraiser";
   postSubtitle = "Mateo Montoya";

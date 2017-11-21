@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-skate',
-  templateUrl: './templates/skate.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Skate implements OnInit {
@@ -15,9 +15,21 @@ export class Skate implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Skate";
   postSubtitle = "David Sheetz";
 
+  socials = [
+    {
+      description: "woodandwheels.tumblr",
+      url: "https://woodandwheels.tumblr.com/",
+      img: "/images/icons/website.png"
+    }
+  ];
 
  constructor(private titleService: Title) { }
 

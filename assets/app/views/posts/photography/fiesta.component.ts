@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-fiesta',
-  templateUrl: './templates/fiesta.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Fiesta implements OnInit {
@@ -14,6 +14,11 @@ export class Fiesta implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Fiesta Birmingham 2016";
   postSubtitle = "Mateo Montoya";

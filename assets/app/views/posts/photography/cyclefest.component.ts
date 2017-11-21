@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-cycle',
-  templateUrl: './templates/cyclefest.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class CycleFest implements OnInit {
@@ -14,6 +14,11 @@ export class CycleFest implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Cycle Fest 2016";
   postSubtitle = "Mateo Montoya";

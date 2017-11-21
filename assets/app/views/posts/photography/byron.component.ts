@@ -2,10 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-byron',
-  templateUrl: './templates/byron.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Byron implements OnInit {
+  constructor(private titleService: Title) { }
+
   images: string[];
   config: any = {
       nextButton: '.swiper-button-right',
@@ -15,10 +17,26 @@ export class Byron implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Byron Sonnier";
   postSubtitle = "Photo Story";
 
- constructor(private titleService: Title) { }
+  socials = [
+    {
+      description: 'byronsonnier.org',
+      url: 'http://www.byronsonnier.org/',
+      img: '/images/icons/website.png'
+    },
+    {
+      description: 'byronsonnier',
+      url: 'https://www.instagram.com/byronsonnier/',
+      img: '/images/icons/insta.png'
+    }
+  ]
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);

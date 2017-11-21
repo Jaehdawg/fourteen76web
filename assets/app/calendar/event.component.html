@@ -1,0 +1,15 @@
+<a href={{message?.url}} target="_blank">
+  <div class="eventContainer" [ngStyle]="{borderColor: eventBorder}">
+    <p class="eventTitle">{{message.title}}</p>
+    <p class="eventDescription">{{message.description}}</p>
+    <div class="oneContainer">
+      <p class="eventVenue">{{message.venue}}</p>
+      <p class="eventTime">{{message.time}}</p>
+    </div>
+    <div class="twoContainer">
+      <p class="eventAddress">{{message.address}}</p>
+      <p class="eventPrice">{{message.price}}</p>
+      <p class="eventDate">{{message.date}}</p>
+    </div>
+  </div>
+</a>

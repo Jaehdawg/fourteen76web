@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-brian',
-  templateUrl: './templates/brian.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Brian implements OnInit {
@@ -14,6 +14,11 @@ export class Brian implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Brian Arnold";
   postSubtitle = "Photo Story";

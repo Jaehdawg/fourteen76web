@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-joust',
-  templateUrl: './templates/joust.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class BikeJoust implements OnInit {
@@ -14,6 +14,11 @@ export class BikeJoust implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = false;
 
   postTitle = "Bike Joust V";
   postSubtitle = "Mateo Montoya"

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-isla',
-  templateUrl: './templates/isla.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Isla implements OnInit {
@@ -15,10 +15,30 @@ export class Isla implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = true;
+  issocial: boolean = true;
+
   postTitle = "Isla De Magia";
   postSubtitle = "Camila Escobar";
-  postDescriptionOne = "I've been to Providencia twice, each time has been different, but what has remained is the magic that lives within. Here is a small selection of photographs that I took around this timeless and enchanting place.";
 
+  description = [
+    "I've been to Providencia twice, each time has been different, but what has remained is the magic that lives within. Here is a small selection of photographs that I took around this timeless and enchanting place."
+  ]
+
+  socials = [
+    {
+      description: 'camilaescobarphotography.com',
+      url: 'http://camilaescobarphotography.com/',
+      img: '/images/icons/website.png'
+    },
+    {
+      description: 'cescobarll',
+      url: 'https://www.instagram.com/cescobarll/',
+      img: '/images/icons/insta.png'
+    }
+  ]
 
  constructor(private titleService: Title) { }
 

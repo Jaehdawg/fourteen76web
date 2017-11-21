@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-ireland',
-  templateUrl: './templates/ireland.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Ireland implements OnInit {
@@ -15,8 +15,26 @@ export class Ireland implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Ireland";
   postSubtitle = "Rachel McElroy";
+
+  socials = [
+    {
+      description: 'rachelmcelroy.com',
+      url: 'https://www.rachelmcelroy.com/',
+      img: '/images/icons/website.png'
+    },
+    {
+      description: 'preraphaelite',
+      url: 'https://www.instagram.com/preraphaelite/',
+      img: '/images/icons/insta.png'
+    }
+  ]
 
 
  constructor(private titleService: Title) { }

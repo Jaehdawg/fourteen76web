@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-milestwist',
-  templateUrl: './templates/milestwist.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class MilesTwist implements OnInit {
@@ -15,8 +15,26 @@ export class MilesTwist implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Miles Twist";
   postSubtitle = "Photo Story";
+
+  socials = [
+    {
+      description: "sniperstreets.com",
+      url: "https://www.sniperstreets.com/",
+      img: "/images/icons/website.png"
+    },
+    {
+      description: "milestwist",
+      url: "https://www.instagram.com/milestwist/",
+      img: "/images/icons/insta.png"
+    }
+  ];
 
  constructor(private titleService: Title) { }
 

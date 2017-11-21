@@ -8,16 +8,17 @@ var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
 var emailRoutes = require('./routes/email');
+var eventsRoutes = require('./routes/events');
 
 var app = express();
-mongoose.connect('mongodb://correoman:postal@ds157380.mlab.com:57380/correos', {useMongoClient: true});
+mongoose.connect('mongodb://admin:admin@ds237855.mlab.com:37855/calendar', {useMongoClient: true});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,7 +32,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-//this /messages goes first since we want to handle specific req first before other routes try to
+app.use('/events', eventsRoutes);
 app.use('/subscribe', emailRoutes);
 //this pretty much tells the app to use messages.js for routes when at /message
 app.use('/', appRoutes);

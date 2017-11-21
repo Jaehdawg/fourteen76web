@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-newyork',
-  templateUrl: './templates/newyork.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class NewYork implements OnInit {
@@ -15,9 +15,31 @@ export class NewYork implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = true;
+  issocial: boolean = true;
+
   postTitle = "New York Perspectives";
   postSubtitle = "Victoria Vrublevska";
-  postDescription = "'New York City Perspectives' is an attempt to capture cinematic qualities of New York - breathtaking perspectives, grand architecture and constant movement of the city that never sleeps.";
+
+  socials = [
+      {
+        description: "victoriavrublevska.vimeo",
+        url: "https://vimeo.com/victoriavrublevska",
+        img: "/images/icons/website.png"
+      },
+      {
+        description: "victoriavrublevska",
+        url: "https://www.instagram.com/victoriavrublevska/",
+        img: "/images/icons/insta.png"
+      }
+  ];
+
+  description = [
+    "'New York City Perspectives' is an attempt to capture cinematic qualities of New York - breathtaking perspectives, grand architecture and constant movement of the city that never sleeps."
+  ]
+
 
 
 

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-winter',
-  templateUrl: './templates/winter.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Winter implements OnInit {
@@ -14,6 +14,19 @@ export class Winter implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
+  socials = [
+      {
+        description: 'thecalliefox',
+        url: 'https://www.instagram.com/thecalliefox/',
+        img: '/images/icons/insta.png'
+      }
+  ]
 
   postTitle = "Wisconsin Winter";
   postSubtitle = "Callie Mills";

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-yoav',
-  templateUrl: './templates/yoav.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Yoav implements OnInit {
@@ -14,6 +14,19 @@ export class Yoav implements OnInit {
       autoHeight: true,
       spaceBetween: 10
   };
+
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
+  socials = [
+      {
+        description: 'pelliyoav',
+        url: 'https://www.instagram.com/pelliyoav/',
+        img: '/images/icons/insta.png'
+      }
+  ]
 
   postTitle = "Yoav Pelli";
   postSubtitle = "Photo Story";

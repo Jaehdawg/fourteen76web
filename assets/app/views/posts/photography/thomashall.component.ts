@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-thomashall',
-  templateUrl: './templates/thomashall.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class ThomasHall implements OnInit {
@@ -15,8 +15,21 @@ export class ThomasHall implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Thomas Hall";
   postSubtitle = "Photo Story";
+
+  socials = [
+    {
+      description: 'thfilm22',
+      url: 'https://www.instagram.com/thfilm22/',
+      img: '/images/icons/insta.png'
+    }
+  ]
 
  constructor(private titleService: Title) { }
 

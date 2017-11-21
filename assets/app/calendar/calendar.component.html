@@ -1,0 +1,23 @@
+<div class="pageContainer">
+  <div class="filterContainer">
+    <button class="filter Fourhvr-underline-from-center" (click)="filterFour()">
+      <p>All</p>
+    </button>
+    <button class="filter Onehvr-underline-from-center" (click)="filterOne()">
+      <p>Arts</p>
+    </button>
+    <button class="filter Twohvr-underline-from-center" (click)="filterTwo()">
+      <p>Music</p>
+    </button>
+    <button class="filter Threehvr-underline-from-center" (click)="filterThree()">
+      <p>Community</p>
+    </button>
+  </div>
+  <div class="gridTest">
+    <calendar-event
+    class="item"
+    [message]="message"
+    *ngFor="let message of messages">
+  </calendar-event>
+  </div>
+</div>

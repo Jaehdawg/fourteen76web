@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 @Component ({
   selector: 'app-twilight',
-  templateUrl: './templates/twilight.component.html'
+  templateUrl: './templates/photography.component.html'
 })
 
 export class Twilight implements OnInit {
@@ -15,11 +15,28 @@ export class Twilight implements OnInit {
       spaceBetween: 10
   };
 
+  ispostTitle: boolean = true;
+  ispostSubtitle: boolean = true;
+  isphotoDescription: boolean = false;
+  issocial: boolean = true;
+
   postTitle = "Twilight Children";
   postSubtitle = "Chris Berntsen";
 
+  socials = [
+      {
+        description: 'chrisberntsen.com',
+        url: 'http://chrisberntsen.com/',
+        img: '/images/icons/website.png'
+      },
+      {
+        description: 'chris.berntsen',
+        url: 'https://www.instagram.com/chris.berntsen/',
+        img: '/images/icons/insta.png'
+      },
+  ]
 
- constructor(private titleService: Title) { }
+  constructor(private titleService: Title) { }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);
