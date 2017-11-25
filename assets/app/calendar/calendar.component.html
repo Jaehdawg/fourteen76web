@@ -1,21 +1,21 @@
 <div class="pageContainer">
   <div class="filterContainer">
-    <li>
+    <li routerLinkActive="active-filterOne">
       <button [routerLink]="['all']" class="filter Fourhvr-underline-from-center" (click)="filter()">
         <p>All</p>
       </button>
     </li>
-    <li>
+    <li routerLinkActive="active-filterTwo">
       <button [routerLink]="['arts']" class="filter Onehvr-underline-from-center" (click)="filter()">
         <p>Arts</p>
       </button>
     </li>
-    <li>
+    <li routerLinkActive="active-filterThree">
       <button [routerLink]="['music']"  class="filter Twohvr-underline-from-center" (click)="filter()">
         <p>Music</p>
       </button>
     </li>
-    <li>
+    <li routerLinkActive="active-filterFour">
       <button [routerLink]="['community']"  class="filter Threehvr-underline-from-center" (click)="filter()">
         <p>Community</p>
       </button>

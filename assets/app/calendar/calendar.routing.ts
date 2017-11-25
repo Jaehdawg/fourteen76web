@@ -6,7 +6,7 @@ import {MusicComponent} from './music.component';
 import {CommunityComponent} from './community.component';
 
 const CALENDAR_ROUTES: Routes = [
-  {path: '', redirectTo: 'all', pathmatch: 'full'},
+  {path: '', redirectTo: 'all', pathMatch: 'full'},
   {path: 'all', component: AllComponent},
   {path: 'arts', component: ArtsComponent},
   {path: 'music', component: MusicComponent},

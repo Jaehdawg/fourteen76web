@@ -10,7 +10,8 @@ import {HttpModule} from '@angular/http';
 import {MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule} from '@angular/material';
 
 // service
-
+import { MetaModule } from 'ng2-meta'
+import { MetaService } from 'ng2-meta';
 import {EmailService} from './subscribe/email.service';
 import {EventService} from './calendar/calendar.service';
 
@@ -202,6 +203,7 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     Twelve
   ],
   imports: [
+    MetaModule.forRoot(),
     BrowserModule,
     HttpModule,
     routing,
@@ -216,7 +218,7 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     SwiperModule
   ],
   bootstrap: [AppComponent],
-  providers: [EmailService, EventService]
+  providers: [EmailService, EventService, MetaService]
 })
 export class AppModule {
 

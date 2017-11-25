@@ -23,6 +23,9 @@ body {
 button, a {
   cursor: pointer;
 }
+button::-moz-focus-inner {
+  border: 0;
+}
 html, body, material-app, mat-sidenav-container, #container {
   margin: 0;
   width: 100%;
@@ -209,13 +212,15 @@ html, body, material-app, mat-sidenav-container, #container {
   -moz-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
   box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
 }
+.filterContainer button:focus {
+  outline: none;
+}
 .filter {
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  border: 4px solid #fff;
 }
 .eventContainer {
   min-height: 300px;
@@ -957,6 +962,19 @@ input, select, textarea,{
   left: 0;
   right: 0;
 }
+/*active filters*/
+.active-filterTwo button {
+  border-bottom: 5px solid #CADEBF;
+}
+.active-filterOne button {
+  border-bottom: 5px solid #f2b1bd;
+}
+.active-filterThree button {
+  border-bottom: 5px solid #f1cbff;
+}
+.active-filterFour button {
+  border-bottom: 5px solid #bae1ff;
+}
 /*One FIlter*/
 .Onehvr-underline-from-center {
   display: inline-block;
@@ -1017,7 +1035,7 @@ input, select, textarea,{
   left: 0;
   right: 0;
 }
-/*Two FIlter*/
+/*Two Filter*/
 .Twohvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;

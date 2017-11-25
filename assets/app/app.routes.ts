@@ -127,7 +127,23 @@ const APP_ROUTES: Routes = [
   {path: 'Girlpool', component: Girlpool},
 
   //Photography
-  {path: 'BikeJoustV', component: BikeJoust},
+  {
+    path: 'BikeJoustV',
+    component: BikeJoust,
+    data: {
+      meta: {
+        title: 'Fouteen76',
+        description: 'Safe Place for Complete Artistic Freedom and Unity...Hub for Underground Art and News in Birmingham and Surrounding Areas',
+        'og:image': 'http://fourteen76.com/Photos/share/girlpoolshare.jpg',
+        'og:site_name': 'Fourteen76',
+        'twitter:card': 'Fourteen76',
+        'twitter: site': 'Fourteen76',
+        'twitter:title': 'Fourteen76',
+        'twitter:image': 'http://fourteen76.com/Photos/girlpoolhome.jpg',
+        'twitter:description': 'Safe Place for Complete Artistic Freedom and Unity...Hub for Underground Art and News in Birmingham and Surrounding Areas'
+      }
+    }
+  },
   {path: 'Gon', component: Gon},
   {path: 'DieTrying', component: DieTrying},
   {path: 'PrideParade', component: PrideParade},
