@@ -101,7 +101,7 @@ const APP_ROUTES: Routes = [
   {path: 'else', component: ElseComponent},
   {path: 'artists', component: ArtistsComponent},
   {path: 'artists/2', component: ArtistsTwoComponent},
-  {path: 'calendar', component: CalendarComponent},
+  {path: 'calendar', component: CalendarComponent, loadChildren: './calendar/calendar.module#CalendarModule'},
   {path: 'music', component: MusicComponent},
   {path: 'food', component: FoodComponent},
   {path: 'photography', component: PhotographyComponent},

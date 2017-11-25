@@ -192,8 +192,12 @@ html, body, material-app, mat-sidenav-container, #container {
   width: 100%;
   margin-bottom: 10px;
 }
-.filterContainer button {
+.filterContainer li {
+  list-style: none;
   width: 25%;
+}
+.filterContainer button {
+  width: 100%;
   font-size: 16px;
   min-height: 36px;
   margin-bottom: 10px;
@@ -378,6 +382,13 @@ html, body, material-app, mat-sidenav-container, #container {
 }
 /*Post Grid*/
 /*Submit Page*/
+.guidelines p {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 29px;
+  color: #1E1E1E;
+}
 .guidelines {
   display: -webkit-flex; /* Safari */
   display: flex;

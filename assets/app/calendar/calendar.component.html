@@ -1,23 +1,25 @@
 <div class="pageContainer">
   <div class="filterContainer">
-    <button class="filter Fourhvr-underline-from-center" (click)="filter()">
-      <p>All</p>
-    </button>
-    <button class="filter Onehvr-underline-from-center" (click)="filter()">
-      <p>Arts</p>
-    </button>
-    <button class="filter Twohvr-underline-from-center" (click)="filter()">
-      <p>Music</p>
-    </button>
-    <button class="filter Threehvr-underline-from-center" (click)="filter()">
-      <p>Community</p>
-    </button>
+    <li>
+      <button [routerLink]="['all']" class="filter Fourhvr-underline-from-center" (click)="filter()">
+        <p>All</p>
+      </button>
+    </li>
+    <li>
+      <button [routerLink]="['arts']" class="filter Onehvr-underline-from-center" (click)="filter()">
+        <p>Arts</p>
+      </button>
+    </li>
+    <li>
+      <button [routerLink]="['music']"  class="filter Twohvr-underline-from-center" (click)="filter()">
+        <p>Music</p>
+      </button>
+    </li>
+    <li>
+      <button [routerLink]="['community']"  class="filter Threehvr-underline-from-center" (click)="filter()">
+        <p>Community</p>
+      </button>
+    </li>
   </div>
-  <div class="gridTest">
-    <calendar-event
-    class="item"
-    [message]="message"
-    *ngFor="let message of messages">
-  </calendar-event>
-  </div>
+  <router-outlet></router-outlet>
 </div>
