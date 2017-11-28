@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { MetaService } from 'ng2-meta'
 
 
 @Component ({
@@ -8,5 +7,4 @@ import { MetaService } from 'ng2-meta'
 })
 
 export class AppComponent {
-  constructor(private metaService: MetaService) {}
 }

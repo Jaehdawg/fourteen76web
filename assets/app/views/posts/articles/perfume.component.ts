@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { Meta } from '@angular/platform-browser';
-import {Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component ({
   selector: 'app-perfume',
@@ -9,7 +8,21 @@ import {Title} from '@angular/platform-browser';
 
 })
 export class PerfumeGenius implements OnInit {
-  constructor(private router: Router, private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Perfume Genius has one of the year’s most critically acclaimed records, No Shape. It’s the brainchild of Mike Hadreas, a 36-year- old Seattle native now living in Tacoma, Washington. For this album, he teamed up with Blake Mills, the coveted producer behind work from the Alabama Shakes, Fiona Apple, John Legend and Conor Oberst.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Perfume Genius has one of the year’s most critically acclaimed records, No Shape. It’s the brainchild of Mike Hadreas, a 36-year- old Seattle native now living in Tacoma, Washington. For this album, he teamed up with Blake Mills, the coveted producer behind work from the Alabama Shakes, Fiona Apple, John Legend and Conor Oberst.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'perfume.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Perfume Genius has one of the year’s most critically acclaimed records, No Shape. It’s the brainchild of Mike Hadreas, a 36-year- old Seattle native now living in Tacoma, Washington. For this album, he teamed up with Blake Mills, the coveted producer behind work from the Alabama Shakes, Fiona Apple, John Legend and Conor Oberst.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'perfume.jpg'}
+    ])
+  }
 
 
 
@@ -17,11 +30,14 @@ export class PerfumeGenius implements OnInit {
   postImage = "/images/headImages/perfumehead.jpg";
   postSubtitle = "Interview by Blake Ells";
 
-  shareFacebook = "https://www.facebook.com/fourteen76/";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'PerfumeGenius';
+  shareTitle: string = 'Perfume%20Genius';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistinterview, muscian, music, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
   // m# = main paragraphs
   //q# = questions
@@ -79,11 +95,11 @@ export class PerfumeGenius implements OnInit {
     a16: `Oh I don’t know…when I was 12, it was like, “Oh, well, okay, I’m never having children. I’m never getting married.” And I just came to accept that in my head. So this is a new thing. It’d probably be difficult. It’d probably cost a lot of money or something. Unless we wait like ten years and they can do some kind of lab growing. Which I used to be really scared of; I thought that baby would be unnatural or something. But I’m kind of into it now. Who am I to say who has a soul and who doesn’t? That’s fucked up. Why couldn’t a gay lab baby have just as pure of a soul as if I had the baby with a close friend or something [laughs]?`
   }
 
-  scroll() {
-    scrollTo(0, 0);
-  }
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

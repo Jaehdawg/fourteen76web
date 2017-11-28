@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
 
 @Component ({
   selector: 'app-colour',
@@ -7,7 +7,21 @@ import {Title} from '@angular/platform-browser';
 
 })
 export class Colour implements OnInit {
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Living Colour was part of a huge wave of guitar and bass-driven funk that emerged in the late ‘80s, and are responsible for recording one of those songs that transcends generations. “Cult of Personality,” which appeared on their 1988 debut Vivid, was the type of song bigger than most any band; it has appeared in television shows, movies, video games, sports arenas—most any place that can use a soundtrack—for nearly 30 years.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content:  `Living Colour was part of a huge wave of guitar and bass-driven funk that emerged in the late ‘80s, and are responsible for recording one of those songs that transcends generations. “Cult of Personality,” which appeared on their 1988 debut Vivid, was the type of song bigger than most any band; it has appeared in television shows, movies, video games, sports arenas—most any place that can use a soundtrack—for nearly 30 years.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'livingcolours.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Living Colour was part of a huge wave of guitar and bass-driven funk that emerged in the late ‘80s, and are responsible for recording one of those songs that transcends generations. “Cult of Personality,” which appeared on their 1988 debut Vivid, was the type of song bigger than most any band; it has appeared in television shows, movies, video games, sports arenas—most any place that can use a soundtrack—for nearly 30 years.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'livingcolours.jpg'}
+    ])
+  }
 
   ispostTitle: boolean = true;
   ispostSubtitle: boolean = true;
@@ -76,14 +90,19 @@ export class Colour implements OnInit {
 
   ]
 
-  shareFacebook = "https://www.facebook.com/fourteen76/";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-
+  pageUrl: string = 'LivingColour';
+  shareTitle: string = 'Living%20Colour';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistinterview, muscian, livingcoulour, music";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

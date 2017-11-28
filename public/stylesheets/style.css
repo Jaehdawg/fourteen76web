@@ -637,6 +637,7 @@ iframe {
 }
 .head p {
   padding: 0;
+  line-height: unset;
 }
 .writtenby {
   font-size: 14px;

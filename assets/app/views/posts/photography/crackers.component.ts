@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component ({
   selector: 'app-crackers',
@@ -7,7 +8,21 @@ import {Title} from '@angular/platform-browser';
 })
 
 export class CrackerPackers implements OnInit {
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `The iconic Carr's of Carlisle factory has been synonymous with the city for nearly two hundred years. Home to the famous Carr's Table Water Biscuit as well as other British classics, Custard Creams, Bourbons, Ginger Nuts and many others under the McVitie's, Jacobs', Crawford's and Carr's brands.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `The iconic Carr's of Carlisle factory has been synonymous with the city for nearly two hundred years. Home to the famous Carr's Table Water Biscuit as well as other British classics, Custard Creams, Bourbons, Ginger Nuts and many others under the McVitie's, Jacobs', Crawford's and Carr's brands.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'crackerpackers.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `The iconic Carr's of Carlisle factory has been synonymous with the city for nearly two hundred years. Home to the famous Carr's Table Water Biscuit as well as other British classics, Custard Creams, Bourbons, Ginger Nuts and many others under the McVitie's, Jacobs', Crawford's and Carr's brands.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'crackerpackers.jpg'}
+    ])
+  }
 
   images: string[];
   config: any = {
@@ -47,6 +62,16 @@ export class CrackerPackers implements OnInit {
    }
  ]
 
+ pageUrl: string = 'CrackerPackers';
+ shareTitle: string = 'Cracker%20Packers';
+ shareFacebook = global.faceShare + this.pageUrl;
+ shareTwitter = "";
+ hastags = "photostory, photography, photographer";
+ shareEmail = "";
+ shareGoogle = global.googleShare + this.pageUrl;
+ shareReddit = "";
+
+
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);
     this.images = [
@@ -60,6 +85,9 @@ export class CrackerPackers implements OnInit {
       '/images/photography/crackerpackers/nine.jpg',
       '/images/photography/crackerpackers/ten.jpg',
       '/images/photography/crackerpackers/eleven.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

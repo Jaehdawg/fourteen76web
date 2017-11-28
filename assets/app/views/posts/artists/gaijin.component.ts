@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component({
   selector: 'app-artist',
@@ -17,7 +18,21 @@ export class Gaijin implements OnInit {
       spaceBetween: 10
   };
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Artist Showcase`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Artist Showcase`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'gaijin.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Artist Showcase`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'gaijin.jpg'}
+    ]);
+  }
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
@@ -30,7 +45,11 @@ export class Gaijin implements OnInit {
       '/images/artists/gaijin/six.jpg',
       '/images/artists/gaijin/seven.jpg',
       '/images/artists/gaijin/eight.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
+
   }
 
   ispostTitle: boolean = true;
@@ -61,11 +80,14 @@ export class Gaijin implements OnInit {
     }
   ];
 
-  shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'GaijinX';
+  shareTitle: string = 'Gaijin%20X';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistshowcase, artist, coolart, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
 }

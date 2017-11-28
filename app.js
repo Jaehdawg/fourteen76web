@@ -11,6 +11,7 @@ var emailRoutes = require('./routes/email');
 var eventsRoutes = require('./routes/events');
 
 var app = express();
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://admin:admin@ds237855.mlab.com:37855/calendar', {useMongoClient: true});
 
 // view engine setup

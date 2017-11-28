@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
+
 @Component ({
   selector: 'app-die',
   templateUrl: './templates/photography.component.html'
@@ -38,7 +40,23 @@ export class DieTrying implements OnInit {
     }
   ];
 
-  constructor(private titleService: Title) { }
+  metaDescription = this.description.toString();
+
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: this.metaDescription},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: this.metaDescription},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'zero.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: this.metaDescription},
+      {name: 'twitter:image', content: global.shareImgUrl + 'zero.jpg'}
+    ])
+  }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);
@@ -52,6 +70,19 @@ export class DieTrying implements OnInit {
       '/images/photography/dietrying/seven.jpg',
       '/images/photography/dietrying/eight.jpg',
       '/images/photography/dietrying/nine.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
+
+  pageUrl: string = 'DieTrying';
+  shareTitle: string = 'Die%20Trying';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "photostory, photography";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
+
 }

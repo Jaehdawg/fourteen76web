@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { Meta } from '@angular/platform-browser';
-import {Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import * as global from '../global';
+
 
 @Component ({
   selector: 'app-marriage',
@@ -9,7 +9,21 @@ import {Title} from '@angular/platform-browser';
 
 })
 export class MarriageComponent implements OnInit {
-  constructor(private router: Router, private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `I'm really influenced by Black people surviving in the US, the QPOC community, single parents, anyone fighting patriarchy, plutocracy and standing up to ignorant assholes in general.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `I'm really influenced by Black people surviving in the US, the QPOC community, single parents, anyone fighting patriarchy, plutocracy and standing up to ignorant assholes in general.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'marriage.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `I'm really influenced by Black people surviving in the US, the QPOC community, single parents, anyone fighting patriarchy, plutocracy and standing up to ignorant assholes in general.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'marriage.jpg'}
+    ])
+  }
 
 
 
@@ -18,14 +32,20 @@ export class MarriageComponent implements OnInit {
   postImageTwo = "/images/postImages/marriage.jpg";
   postSubtitle = "By Ahmad Jackson";
 
-  shareFacebook = "https://www.facebook.com/fourteen76/";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'Marriage';
+  shareTitle: string = 'Marriage';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistinterview, music, muscian, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

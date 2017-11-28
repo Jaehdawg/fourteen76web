@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component ({
   selector: 'app-girl',
@@ -7,7 +8,21 @@ import {Title} from '@angular/platform-browser';
 
 })
 export class Girlpool implements OnInit {
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Girlpool is Cleo Tucker and Harmony Tividad from Los Angeles. They began writing and playing music by themselves and added a drummer for the 2017 release Powerplant. Their sound has grown bigger since their debut, Before the World Was Big.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Girlpool is Cleo Tucker and Harmony Tividad from Los Angeles. They began writing and playing music by themselves and added a drummer for the 2017 release Powerplant. Their sound has grown bigger since their debut, Before the World Was Big.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'girlpool.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Girlpool is Cleo Tucker and Harmony Tividad from Los Angeles. They began writing and playing music by themselves and added a drummer for the 2017 release Powerplant. Their sound has grown bigger since their debut, Before the World Was Big.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'girlpool.jpg'}
+    ])
+  }
 
   ispostTitle: boolean = true;
   ispostSubtitle: boolean = true;
@@ -74,14 +89,20 @@ export class Girlpool implements OnInit {
     }
   ]
 
-  shareFacebook = "https://www.facebook.com/fourteen76/";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'Girlpool';
+  shareTitle: string = 'Girlpool';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "interview, girlpool, music, muscianinterview";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

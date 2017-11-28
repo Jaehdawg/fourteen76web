@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
+
 @Component ({
   selector: 'app-cycle',
   templateUrl: './templates/photography.component.html'
@@ -24,7 +26,21 @@ export class CycleFest implements OnInit {
   postSubtitle = "Mateo Montoya";
 
 
- constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Photo Story`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Photo Story`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'cyclefest.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Photo Story`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'cyclefest.jpg'}
+    ])
+  }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);
@@ -48,6 +64,19 @@ export class CycleFest implements OnInit {
       '/images/photography/cyclefest/fourteen.jpg',
       '/images/photography/cyclefest/fifteen.jpg',
       '/images/photography/cyclefest/sixteen.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
+
+  pageUrl: string = 'Cyclefest16';
+  shareTitle: string = 'Cycle%20Fest';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "photostory";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
+
 }

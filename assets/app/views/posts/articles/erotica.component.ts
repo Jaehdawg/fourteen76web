@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { Meta } from '@angular/platform-browser';
-import {Router} from '@angular/router';
-import {Title} from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component ({
   selector: 'app-erotica',
@@ -9,7 +8,21 @@ import {Title} from '@angular/platform-browser';
 
 })
 export class EroticaComponent implements OnInit {
-  constructor(private router: Router, private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `As the arts in Birmingham grow steadily and as a centralized, DIY artists' community begins to extend upward from its roots, spaces like Chroma Cove, a new studio and venue in Forest Park, prove how essential they are to this growth.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `As the arts in Birmingham grow steadily and as a centralized, DIY artists' community begins to extend upward from its roots, spaces like Chroma Cove, a new studio and venue in Forest Park, prove how essential they are to this growth.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'chromacove.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `As the arts in Birmingham grow steadily and as a centralized, DIY artists' community begins to extend upward from its roots, spaces like Chroma Cove, a new studio and venue in Forest Park, prove how essential they are to this growth.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'chromacove.jpg'}
+    ])
+  }
 
 
 
@@ -21,14 +34,20 @@ export class EroticaComponent implements OnInit {
   postSubtitle = "By Jonathan Patrick";
   postSubtitlePhoto = "Photography by Mateo Montoya";
 
-  shareFacebook = "https://www.facebook.com/fourteen76/";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'ArtErotica';
+  shareTitle: string = 'Art%20Erotica';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistshowcase, artists, artgallery, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 }

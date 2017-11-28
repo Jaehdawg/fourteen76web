@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component({
   selector: 'app-artist',
@@ -17,7 +18,21 @@ export class Princess implements OnInit {
   };
 
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `The girls are putting on their faces in the bathroom while I’m crouching on the wooden floor and the afternoon sun starts raising floodlights on the space I used to call my bedroom. I causally chew on the wooden tip of my hand fan and check the time. We’re running behind, but it was to be expected: The girls are new to Alabama­­, let alone Birmingham­­, so finding their materials would have understandably taken a good chunk of time.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `The girls are putting on their faces in the bathroom while I’m crouching on the wooden floor and the afternoon sun starts raising floodlights on the space I used to call my bedroom. I causally chew on the wooden tip of my hand fan and check the time. We’re running behind, but it was to be expected: The girls are new to Alabama­­, let alone Birmingham­­, so finding their materials would have understandably taken a good chunk of time.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'princess.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `The girls are putting on their faces in the bathroom while I’m crouching on the wooden floor and the afternoon sun starts raising floodlights on the space I used to call my bedroom. I causally chew on the wooden tip of my hand fan and check the time. We’re running behind, but it was to be expected: The girls are new to Alabama­­, let alone Birmingham­­, so finding their materials would have understandably taken a good chunk of time.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'princess.jpg'}
+    ])
+  }
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
@@ -39,7 +54,10 @@ export class Princess implements OnInit {
       '/images/photography/princess/sixteen.jpg',
       '/images/photography/princess/seventeen.jpg',
       '/images/photography/princess/eighteen.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 
   ispostTitle: boolean = true;
@@ -157,11 +175,14 @@ export class Princess implements OnInit {
     }
   ];
 
-  shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'Princess4Princess';
+  shareTitle: string = 'Princess%204%20Princess';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistshowcase, artists, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
 }

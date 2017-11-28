@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component({
   selector: 'app-artist',
@@ -16,7 +17,21 @@ export class Rizzo implements OnInit {
       spaceBetween: 10
   };
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Artist Interview`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Artist Interview`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'Rizzo.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Artist Interview`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'Rizzo.jpg'}
+    ])
+  }
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
@@ -29,7 +44,10 @@ export class Rizzo implements OnInit {
       '/images/artists/rizzo/six.jpg',
       '/images/artists/rizzo/seven.jpg',
       '/images/artists/rizzo/eight.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 
   ispostTitle: boolean = true;
@@ -81,11 +99,14 @@ export class Rizzo implements OnInit {
     }
   ];
 
-  shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'Rizzo';
+  shareTitle: string = 'Rizzo';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "artistshowcase, artist, creatives";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
 }

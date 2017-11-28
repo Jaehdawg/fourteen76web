@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
 
 @Component({
   selector: 'app-artist',
@@ -16,7 +17,24 @@ export class Lewis implements OnInit {
       spaceBetween: 10
   };
 
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+    {name: 'description', content: `Questions and answers transcribed from our interview with Lewis Lunbeck, a man of the road.
+How long have you been on the road?`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Questions and answers transcribed from our interview with Lewis Lunbeck, a man of the road.
+How long have you been on the road?`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'lewis.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Questions and answers transcribed from our interview with Lewis Lunbeck, a man of the road.
+How long have you been on the road?`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'lewis.jpg'}
+    ]);
+  }
 
   ngOnInit() {
     this.titleService.setTitle(this.postTitle);
@@ -26,7 +44,10 @@ export class Lewis implements OnInit {
       '/images/photography/lewis/three.jpg',
       '/images/photography/lewis/four.jpg',
       '/images/photography/lewis/five.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
 
   ispostTitle: boolean = true;
@@ -142,11 +163,14 @@ export class Lewis implements OnInit {
     }
   ];
 
-  shareFacebook = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/don_gero.html";
-  shareTwitter = "https://www.facebook.com/fourteen76/";
-  shareEmail = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareGoogle = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
-  shareReddit = "mailto:?body=Check%20this%20out%20http://www.fourteen76.com/perfume_genius.html";
+  pageUrl: string = 'LewisAndQuasar';
+  shareTitle: string = 'Lewis%20and%20Quasar';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "interview, lifeontheroad";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
 
 
 }

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+import * as global from '../global';
+
 @Component ({
   selector: 'app-endangered',
   templateUrl: './templates/photography.component.html'
@@ -53,7 +55,21 @@ export class Endangered implements OnInit {
     }
   ];
 
- constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private meta: Meta) {
+    this.meta.addTags([
+      {name: 'description', content: `Endangered Species is a collection of photographs by Josh Ethan Johnson taken over a 16 year period. The book is a study in the speed and impermanence culture. While most of the photos are taken in America and NYC specifically, the book is more a look at human behavior and culture versus countries.`},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Endangered Species is a collection of photographs by Josh Ethan Johnson taken over a 16 year period. The book is a study in the speed and impermanence culture. While most of the photos are taken in America and NYC specifically, the book is more a look at human behavior and culture versus countries.`},
+      {property: 'og:type', content: "article"},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'endangered_species.jpg'}
+      {property: 'og:site_name', content: 'Fourteen76'}
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {name: 'twitter:title', content: this.postTitle},
+      {name: 'twitter:description', content: `Endangered Species is a collection of photographs by Josh Ethan Johnson taken over a 16 year period. The book is a study in the speed and impermanence culture. While most of the photos are taken in America and NYC specifically, the book is more a look at human behavior and culture versus countries.`},
+      {name: 'twitter:image', content: global.shareImgUrl + 'endangered_species.jpg'}
+    ])
+  }
 
   ngOnInit () {
     this.titleService.setTitle(this.postTitle);
@@ -77,6 +93,19 @@ export class Endangered implements OnInit {
       '/images/photography/endangered/seventeen.jpg',
       '/images/photography/endangered/nineteen.jpg',
       '/images/photography/endangered/twenty.jpg'
-    ]
+    ];
+    this.shareEmail = global.emailJoin(this.shareTitle, this.pageUrl);
+    this.shareTwitter = global.twitterJoin(this.pageUrl, this.shareTitle, this.hastags);
+    this.shareReddit = global.redditJoin(this.pageUrl, this.shareTitle);
   }
+
+  pageUrl: string = 'EndangeredSpecies';
+  shareTitle: string = 'Endangeres%20Species';
+  shareFacebook = global.faceShare + this.pageUrl;
+  shareTwitter = "";
+  hastags = "photography, photostory";
+  shareEmail = "";
+  shareGoogle = global.googleShare + this.pageUrl;
+  shareReddit = "";
+
 }
