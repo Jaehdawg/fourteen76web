@@ -1,6 +1,22 @@
 <div class="pageContainer" #scrollMe>
   <div class="pageHome">
     <div class="rows mainRows">
+      <div class="col seven hvr-underline-reveal">
+        <a [routerLink]="['/CindyWilson']">
+          <img src="/images/thumbnails/cindywilson.jpg" alt=""/>
+          <span><p class="name">Cindy Wilson</p></span>
+  				<span><p class="category">Blake Ells</p></span>
+        </a>
+      </div>
+      <div class="col five hvr-underline-reveal">
+        <a [routerLink]="['/calendar']">
+          <img src="/images/thumbnails/calendar.jpg" alt=""/>
+          <span><p class="name">Keep Up With Local Events</p></span>
+          <span><p class="category">Calendar</p></span>
+        </a>
+      </div>
+    </div>
+    <div class="rows mainRows">
       <div class="col five hvr-underline-reveal">
         <a [routerLink]="['/Girlpool']">
           <img src="/images/thumbnails/girlpool.jpg" alt=""/>
@@ -80,7 +96,7 @@
         </a>
       </div>
     </div>
-    <div class="rows mainRows">
+    <div class="rows mainRows lastrow">
       <div class="col five hvr-underline-reveal">
         <a [routerLink]="['/Boom']">
           <img src="/images/thumbnails/boom.jpg" alt=""/>
@@ -93,22 +109,6 @@
           <img src="/images/thumbnails/gon.jpg" alt=""/>
           <span><p class="name">'Gon</p></span>
           <span><p class="category">Jonathan Patrick</p></span>
-        </a>
-      </div>
-    </div>
-    <div class="rows mainRows lastrow">
-      <div class="col six hvr-underline-reveal">
-        <a [routerLink]="['/MerrileeChalliss']">
-          <img src="/images/thumbnails/merrilee.jpg" alt=""/>
-          <span><p class="name">Merrilee Challiss</p></span>
-    			<span><p class="category">Artist Interview</p></span>
-        </a>
-      </div>
-      <div class="col six hvr-underline-reveal">
-        <a [routerLink]="['/DieTrying']">
-          <img src="/images/thumbnails/zerohome.jpg" alt=""/>
-          <span><p class="name">DIE TRYING</p></span>
-    			<span><p class="category">Sniper Streets</p></span>
         </a>
       </div>
     </div>

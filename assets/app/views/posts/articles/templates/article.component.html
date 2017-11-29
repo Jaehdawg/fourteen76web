@@ -54,6 +54,7 @@
         <p class="answers" *ngIf="q.a3">{{q.a3}}</p>
       </div>
     </div>
+    <p class="answers centerText" *ngIf="isFinalP" style="margin-top: 25px; font-style: italic">{{finalParagraph}}</p>
     <div class="shoutout" *ngIf="issocial">
       <div class="socialBlock" *ngFor="let social of socials">
         <a class="hvr-shrink" href={{social.url}} target="_blank">

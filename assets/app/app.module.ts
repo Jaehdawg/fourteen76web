@@ -47,6 +47,7 @@ import {EroticaComponent} from './views/posts/articles/erotica.component';
 import {ZypComponent} from './views/posts/articles/zyp.component';
 import {HeirloomComponent} from './views/posts/articles/heirloom.component';
 import {CarrigansComponent} from './views/posts/articles/carrigans.component';
+import {CindyWilson} from './views/posts/articles/cindywilson.component';
 //photography
 import {BikeJoust} from './views/posts/photography/joust.component';
 import {Gon} from './views/posts/photography/gon.component';
@@ -198,7 +199,8 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     Princess,
     Colour,
     Girlpool,
-    Twelve
+    Twelve,
+    CindyWilson
   ],
   imports: [
     BrowserModule,

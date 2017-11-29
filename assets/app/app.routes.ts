@@ -16,6 +16,7 @@ import {SubscribeComponent} from './subscribe/subscribe.component';
 import {ElseComponent} from './views/Mviews/else.component';
 //articles
 import {PerfumeGenius} from './views/posts/articles/perfume.component';
+import {CindyWilson} from './views/posts/articles/cindywilson.component';
 import {Colour} from './views/posts/articles/colours.component';
 import {Girlpool} from './views/posts/articles/girlpool.component';
 import {BloodComponent} from './views/posts/articles/blood.component';
@@ -125,6 +126,7 @@ const APP_ROUTES: Routes = [
   {path: 'StreetSoul', component: CarrigansComponent},
   {path: 'LivingColour', component: Colour},
   {path: 'Girlpool', component: Girlpool},
+  {path: 'CindyWilson', component: CindyWilson},
 
   //Photography
   {path: 'BikeJoustV', component: BikeJoust},
