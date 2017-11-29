@@ -23,7 +23,7 @@ export class ElseComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "else";
   ngOnInit() {
     this.titleService.setTitle('!ELSE¡');
   }

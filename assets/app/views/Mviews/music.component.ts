@@ -23,7 +23,7 @@ export class MusicComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "music";
   ngOnInit() {
     this.titleService.setTitle('Music');
   }

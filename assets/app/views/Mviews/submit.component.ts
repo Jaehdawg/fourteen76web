@@ -22,7 +22,7 @@ export class SubmitComponent implements OnInit{
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "submit";
   ngOnInit() {
     this.titleService.setTitle('Submit');
   }

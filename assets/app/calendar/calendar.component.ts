@@ -23,6 +23,7 @@ export class CalendarComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
+  pageUrl = "calendar";
   ngOnInit() {
     this.titleService.setTitle('Calendar');
   }

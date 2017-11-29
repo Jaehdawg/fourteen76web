@@ -23,7 +23,7 @@ export class ArtistsTwoComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "artists/2";
   unactiveCircle = "none";
   activeCircle = "black";
 

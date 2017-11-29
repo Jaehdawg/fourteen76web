@@ -1,4 +1,4 @@
-import {Component, Input, AfterContentChecked} from '@angular/core';
+import {Component, Input, AfterContentChecked, OnInit} from '@angular/core';
 import { Message } from "./event.model";
 import { EventService } from "./calendar.service";
 
@@ -7,7 +7,7 @@ import { EventService } from "./calendar.service";
   templateUrl: './event.component.html'
 
 })
-export class EventComponent implements AfterContentChecked {
+export class EventComponent implements AfterContentChecked, OnInit {
   @Input() message: Message;
 
 
@@ -29,7 +29,8 @@ export class EventComponent implements AfterContentChecked {
     } else {
       this.eventBorder = "#fffff";
     };
-    
+  }
+  ngOnInit(){
     if(this.message.month == "1"){
         return this.message.month = "January";
       } else if(this.message.month == "2"){
@@ -58,5 +59,6 @@ export class EventComponent implements AfterContentChecked {
         return this.message.month = "Month";
       };
   }
+
 
 }

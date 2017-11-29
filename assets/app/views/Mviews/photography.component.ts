@@ -23,7 +23,7 @@ export class PhotographyComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "photography";
   unactiveCircle = "none";
   activeCircle = "black";
 

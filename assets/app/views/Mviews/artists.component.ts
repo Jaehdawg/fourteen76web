@@ -24,7 +24,7 @@ export class ArtistsComponent implements OnInit {
     ]);
   }
 
-
+  pageUrl = "artists";
   unactiveCircle = "none";
   activeCircle = "black";
 

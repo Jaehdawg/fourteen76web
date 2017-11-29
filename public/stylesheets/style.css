@@ -116,11 +116,12 @@ html, body, material-app, mat-sidenav-container, #container {
   flex: 1;
   width: 265px;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
 }
-.activeMenu {
-  color: #B20000;
+.menuActive {
+  border-bottom: 2px solid #f2b1bd;
 }
 .sideMenu a {
   text-decoration: none;
@@ -147,6 +148,7 @@ html, body, material-app, mat-sidenav-container, #container {
   flex: 1;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 80px;
 }
 .sideMenuMedia img {
   height: 28px;

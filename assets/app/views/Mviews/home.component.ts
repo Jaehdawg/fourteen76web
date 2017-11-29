@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "home";
   unactiveCircle = "none";
   activeCircle = "black";
 

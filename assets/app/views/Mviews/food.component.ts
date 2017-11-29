@@ -23,7 +23,7 @@ export class FoodComponent implements OnInit {
       {name: 'twitter:image', content: global.shareImgUrl + 'fourteen76.jpg'}
     ]);
   }
-
+  pageUrl = "food";
   ngOnInit() {
     this.titleService.setTitle('Food');
   }
