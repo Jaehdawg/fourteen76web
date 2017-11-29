@@ -4,7 +4,7 @@ var Message = require('../models/messages');
 
 
 router.get('/', function(req, res, next){
-  Message.find({}).sort({date: 'asc'}).exec(function(err, messages){
+  Message.find({}).sort({day: 1}).exec(function(err, messages){
             if(err) {
               return res.status(500).json({
                 title: 'An Error Occurred',

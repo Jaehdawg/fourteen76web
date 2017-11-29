@@ -22,7 +22,8 @@ export class EventService {
                   transformedMessages.push(new Message(
                     message.title,
                     message.description,
-                    message.date,
+                    message.month,
+                    message.day,
                     message.time,
                     message.venue,
                     message.address,
@@ -51,7 +52,8 @@ export class EventService {
                   transformedMessages.push(new Message(
                     message.title,
                     message.description,
-                    message.date,
+                    message.month,
+                    message.day,
                     message.time,
                     message.venue,
                     message.address,
@@ -80,7 +82,8 @@ export class EventService {
                   transformedMessages.push(new Message(
                     message.title,
                     message.description,
-                    message.date,
+                    message.month,
+                    message.day,
                     message.time,
                     message.venue,
                     message.address,
@@ -109,7 +112,8 @@ export class EventService {
                   transformedMessages.push(new Message(
                     message.title,
                     message.description,
-                    message.date,
+                    message.month,
+                    message.day,
                     message.time,
                     message.venue,
                     message.address,
