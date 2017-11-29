@@ -15,8 +15,8 @@ export class SleepDrive implements OnInit {
       {property: 'og:description', content: `Birmingham native, Ant'lrd's, newest LP pivots on the hinges of a modern nostalgia, swaying back and forth between memories not yet experienced and flashes of past lives with lilting precision. The three track release is a long draw from a deep well, while never overstaying its welcome. Here Ant'lrd sheds a little insight on his most recent mantra, Sleep Drive.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'sleepdrive.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'sleepdrive.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Birmingham native, Ant'lrd's, newest LP pivots on the hinges of a modern nostalgia, swaying back and forth between memories not yet experienced and flashes of past lives with lilting precision. The three track release is a long draw from a deep well, while never overstaying its welcome. Here Ant'lrd sheds a little insight on his most recent mantra, Sleep Drive.`},

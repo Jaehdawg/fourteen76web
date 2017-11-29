@@ -16,8 +16,8 @@ export class ZypComponent implements OnInit {
       {property: 'og:description', content: `If you happen to be unfamiliar with Zyp BikeShare, the initiative's aim is to provide a reliable and alternative source to getting from point A to point B. Zyp provides a new mode of transportation within Birmingham's city limits. Forty kiosks harboring four hundred bicycles are scattered throughout the city; from Uptown to Highlands, Zyp bikes are available to all.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'zyp.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'zyp.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `If you happen to be unfamiliar with Zyp BikeShare, the initiative's aim is to provide a reliable and alternative source to getting from point A to point B. Zyp provides a new mode of transportation within Birmingham's city limits. Forty kiosks harboring four hundred bicycles are scattered throughout the city; from Uptown to Highlands, Zyp bikes are available to all.`},

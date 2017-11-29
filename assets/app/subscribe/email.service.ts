@@ -12,10 +12,10 @@ export class EmailService {
         const body = JSON.stringify(email);
         const headers = new Headers({'Content-Type': 'application/json'});
         //v  sets up observable
-        return this.http.post('http://localhost:1476/subscribe', body, {headers: headers})
+        return this.http.post('http://fourteen76.com/subscribe', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) => Observable.throw(error.json()));
             //.map() allows you to transform data
     }
-    
+
 }

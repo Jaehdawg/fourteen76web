@@ -15,8 +15,8 @@ export class CarrigansComponent implements OnInit {
       {property: 'og:description', content: `Jonathan Brennan can be a tough dude to track down. If he's not firing, slicing, smoking, sauteing, or braising, you might find him at the Haints' shop turning a wrench. Or you might not. That's because these two pseudo stationary moments are about as still as this guy gets, being known to skid from Birmingham to Long Beach, from Milwaukee to Colorado, on cross country rides in search of sights to behold and Ma and Pa spots worth adding to his bestiary. He and the caravan are, in his own words, "broke ass foodies, more or less."`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.sharesImgUrl + 'carrigan.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'carrigan.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Jonathan Brennan can be a tough dude to track down. If he's not firing, slicing, smoking, sauteing, or braising, you might find him at the Haints' shop turning a wrench. Or you might not. That's because these two pseudo stationary moments are about as still as this guy gets, being known to skid from Birmingham to Long Beach, from Milwaukee to Colorado, on cross country rides in search of sights to behold and Ma and Pa spots worth adding to his bestiary. He and the caravan are, in his own words, "broke ass foodies, more or less."`},

@@ -15,8 +15,8 @@ export class PerfumeGenius implements OnInit {
       {property: 'og:description', content: `Perfume Genius has one of the year’s most critically acclaimed records, No Shape. It’s the brainchild of Mike Hadreas, a 36-year- old Seattle native now living in Tacoma, Washington. For this album, he teamed up with Blake Mills, the coveted producer behind work from the Alabama Shakes, Fiona Apple, John Legend and Conor Oberst.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'perfume.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'perfume.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Perfume Genius has one of the year’s most critically acclaimed records, No Shape. It’s the brainchild of Mike Hadreas, a 36-year- old Seattle native now living in Tacoma, Washington. For this album, he teamed up with Blake Mills, the coveted producer behind work from the Alabama Shakes, Fiona Apple, John Legend and Conor Oberst.`},

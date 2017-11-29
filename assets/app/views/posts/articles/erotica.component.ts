@@ -15,8 +15,8 @@ export class EroticaComponent implements OnInit {
       {property: 'og:description', content: `As the arts in Birmingham grow steadily and as a centralized, DIY artists' community begins to extend upward from its roots, spaces like Chroma Cove, a new studio and venue in Forest Park, prove how essential they are to this growth.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'chromacove.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'chromacove.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `As the arts in Birmingham grow steadily and as a centralized, DIY artists' community begins to extend upward from its roots, spaces like Chroma Cove, a new studio and venue in Forest Park, prove how essential they are to this growth.`},

@@ -16,8 +16,8 @@ export class UpperRoom implements OnInit {
       {property: 'og:description', content: `“In the Upper Room” is a piece that shows a ballet company’s chops, so to say. To perform the piece requires a company of dancers who fully understand the intricacies of modern dance, who can accomplish small ticks and jerks while maintaining the austere ease of ballet dancers.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'upperroom.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'upperroom.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `“In the Upper Room” is a piece that shows a ballet company’s chops, so to say. To perform the piece requires a company of dancers who fully understand the intricacies of modern dance, who can accomplish small ticks and jerks while maintaining the austere ease of ballet dancers.`},

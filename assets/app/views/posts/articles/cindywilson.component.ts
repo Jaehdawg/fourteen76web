@@ -15,8 +15,8 @@ export class CindyWilson implements OnInit {
       {property: 'og:description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'cindywilson.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'cindywilson.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
@@ -24,6 +24,8 @@ export class CindyWilson implements OnInit {
     ])
   }
 
+  images: boolean = false;
+  isFinalP: boolean = true;
   ispostTitle: boolean = true;
   ispostSubtitle: boolean = true;
   ispostSubtitlePhoto: boolean = false;
@@ -95,7 +97,6 @@ export class CindyWilson implements OnInit {
       a: `It’s kind of cool! Yeah! Music has always been influenced by previous artists and it keeps echoing down through the generations. It’s really cool. I’m really proud that we got to be a part of that and influence <b>younger</b> bands.`
     }
   ];
-  isFinalP: boolean = true;
   finalParagraph = [
     "Cindy Wilson opens her solo tour at Saturn on Wednesday, November 29. Doors are at 7 p.m. Show begins at 8 p.m. Yip Deceiver and Material Girls open. General admission tickets are $15, while VIP Meet-and-Greet tickets are $30."
   ];

@@ -16,8 +16,8 @@ export class MarriageComponent implements OnInit {
       {property: 'og:description', content: `I'm really influenced by Black people surviving in the US, the QPOC community, single parents, anyone fighting patriarchy, plutocracy and standing up to ignorant assholes in general.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'marriage.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'marriage.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `I'm really influenced by Black people surviving in the US, the QPOC community, single parents, anyone fighting patriarchy, plutocracy and standing up to ignorant assholes in general.`},

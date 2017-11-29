@@ -20,7 +20,7 @@ export class Twelve implements OnInit {
   ispostTitle: boolean = true;
   ispostSubtitle: boolean = true;
   isphotoDescription: boolean = false;
-  isSocial: boolean = true;
+  issocial: boolean = false;
 
   postTitle = "Twelve Weeks of Winter";
   postSubtitle = "Antonio Rodriguez";
@@ -33,8 +33,8 @@ export class Twelve implements OnInit {
       {property: 'og:description', content: `Photo Story`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'twelve.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'twelve.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Photo Story`},

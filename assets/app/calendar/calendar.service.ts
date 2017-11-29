@@ -13,7 +13,7 @@ export class EventService {
 
     //we return http since we create an observable in the component later on
     getMessages() {
-        return this.http.get('http://localhost:1476/events')
+        return this.http.get('http://fourteen76.com/events')
               .map((response: Response) => {
                 const messages = response.json().obj;
                 //v  this transforms the result into what we want on the front end ex: (minus: _v, _id ...)
@@ -43,7 +43,7 @@ export class EventService {
               .catch((error: Response) => Observable.throw(error.json()));
     };
     getMessagesArts() {
-        return this.http.get('http://localhost:1476/events/arts')
+        return this.http.get('http://fourteen76.com/events/arts')
               .map((response: Response) => {
                 const messages = response.json().obj;
                 //v  this transforms the result into what we want on the front end ex: (minus: _v, _id ...)
@@ -73,7 +73,7 @@ export class EventService {
               .catch((error: Response) => Observable.throw(error.json()));
     };
     getMessagesMusic() {
-        return this.http.get('http://localhost:1476/events/music')
+        return this.http.get('http://fourteen76.com/events/music')
               .map((response: Response) => {
                 const messages = response.json().obj;
                 //v  this transforms the result into what we want on the front end ex: (minus: _v, _id ...)
@@ -103,7 +103,7 @@ export class EventService {
               .catch((error: Response) => Observable.throw(error.json()));
     };
     getMessagesCommunity() {
-        return this.http.get('http://localhost:1476/events/community')
+        return this.http.get('http://fourteen76.com/events/community')
               .map((response: Response) => {
                 const messages = response.json().obj;
                 //v  this transforms the result into what we want on the front end ex: (minus: _v, _id ...)

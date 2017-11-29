@@ -15,8 +15,8 @@ export class PsychicHotline implements OnInit {
       {property: 'og:description', content: `I meet Ruth Ex at the coffee shop. A petite frame sports a menagerie of tattoos and piercings balancing against an androgynous haircut and dark lipstick; Ruth Ex is as hungover as I am from the events of Southern Decadence, so the coffee is well appreciated. Their voice is soft and polite as Ruth Ex explains the house show approaching in four or so hours.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'psychic.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'psychic.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `I meet Ruth Ex at the coffee shop. A petite frame sports a menagerie of tattoos and piercings balancing against an androgynous haircut and dark lipstick; Ruth Ex is as hungover as I am from the events of Southern Decadence, so the coffee is well appreciated. Their voice is soft and polite as Ruth Ex explains the house show approaching in four or so hours.`},

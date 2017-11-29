@@ -15,8 +15,8 @@ export class Girlpool implements OnInit {
       {property: 'og:description', content: `Girlpool is Cleo Tucker and Harmony Tividad from Los Angeles. They began writing and playing music by themselves and added a drummer for the 2017 release Powerplant. Their sound has grown bigger since their debut, Before the World Was Big.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'girlpool.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'girlpool.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Girlpool is Cleo Tucker and Harmony Tividad from Los Angeles. They began writing and playing music by themselves and added a drummer for the 2017 release Powerplant. Their sound has grown bigger since their debut, Before the World Was Big.`},
@@ -24,6 +24,8 @@ export class Girlpool implements OnInit {
     ])
   }
 
+  images: boolean = false;
+  isFinalP: boolean = false;
   ispostTitle: boolean = true;
   ispostSubtitle: boolean = true;
   ispostSubtitlePhoto: boolean = false;

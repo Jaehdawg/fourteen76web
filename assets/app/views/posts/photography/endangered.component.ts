@@ -62,8 +62,8 @@ export class Endangered implements OnInit {
       {property: 'og:description', content: `Endangered Species is a collection of photographs by Josh Ethan Johnson taken over a 16 year period. The book is a study in the speed and impermanence culture. While most of the photos are taken in America and NYC specifically, the book is more a look at human behavior and culture versus countries.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'endangered_species.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'endangered_species.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Endangered Species is a collection of photographs by Josh Ethan Johnson taken over a 16 year period. The book is a study in the speed and impermanence culture. While most of the photos are taken in America and NYC specifically, the book is more a look at human behavior and culture versus countries.`},

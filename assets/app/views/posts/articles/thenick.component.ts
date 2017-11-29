@@ -16,8 +16,8 @@ export class NickRocks implements OnInit {
       {property: 'og:description', content: `Rock n' Roll sans sticky dives is like a family lacking its con uncle, like mud minus hot, sweet dirt; that lil bit of grit, an essential ingredient in the mix of what makes a memory worth a smile. There's some fucked, mild magic in the intimacy gained while piled inside a spooky rock clubs' most American moments.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Rock n' Roll sans sticky dives is like a family lacking its con uncle, like mud minus hot, sweet dirt; that lil bit of grit, an essential ingredient in the mix of what makes a memory worth a smile. There's some fucked, mild magic in the intimacy gained while piled inside a spooky rock clubs' most American moments.`},

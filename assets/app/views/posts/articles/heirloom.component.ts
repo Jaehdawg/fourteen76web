@@ -16,8 +16,8 @@ export class HeirloomComponent implements OnInit {
       {property: 'og:description', content: `Food trucks: the craze that has become a bento so overfull with ceviche-sushi fusion concepts it has started spilling onto a pallet churning out everything from bao ice cream sandwiches to gourmet grilled cheeses. While intercultural culinary savvy is an exciting and exponentially expanding prospect,`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'zebbie.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'zebbie.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Food trucks: the craze that has become a bento so overfull with ceviche-sushi fusion concepts it has started spilling onto a pallet churning out everything from bao ice cream sandwiches to gourmet grilled cheeses. While intercultural culinary savvy is an exciting and exponentially expanding prospect,`},

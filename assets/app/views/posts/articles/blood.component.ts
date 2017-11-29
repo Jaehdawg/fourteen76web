@@ -15,8 +15,8 @@ export class BloodComponent implements OnInit {
       {property: 'og:description', content: "\"It's not productive to the movement if I'm the focus,\" Jordan Eagles said into his phone. He was speaking to a member of his marketing team in New York about a promotional video for his piece, Blood Mirror, a seven foot tall glass monolith filled with the blood of 59 donors denied the right to give blood due to their sexual orientation."},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'ourbloodshare.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'ourbloodshare.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: "\"It's not productive to the movement if I'm the focus,\" Jordan Eagles said into his phone. He was speaking to a member of his marketing team in New York about a promotional video for his piece, Blood Mirror, a seven foot tall glass monolith filled with the blood of 59 donors denied the right to give blood due to their sexual orientation."},

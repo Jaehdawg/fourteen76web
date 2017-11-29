@@ -15,11 +15,7 @@ export class EventComponent implements AfterContentChecked, OnInit {
   iseventBorder = "3px solid";
   messageType: string = "";
   ngAfterContentChecked() {
-    if(this.message.title == "Community Event"){
-      return this.message.title = "New Community Event";
-    };
     this.messageType = this.message.type;
-    console.log(this.messageType);
     if(this.messageType == "1") {
       this.eventBorder = '#CADEBF';
     } else if(this.messageType == "2") {

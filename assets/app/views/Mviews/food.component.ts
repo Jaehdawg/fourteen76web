@@ -15,8 +15,8 @@ export class FoodComponent implements OnInit {
       {property: 'og:description', content: `Through print, digital media, and work with local businesses, Fourteen76 showcases the intersectional talent and news hidden in the cracks of Birmingham and surrounding areas.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: "Food | Fourteen76"},
       {name: 'twitter:description', content: `Through print, digital media, and work with local businesses, Fourteen76 showcases the intersectional talent and news hidden in the cracks of Birmingham and surrounding areas.`},

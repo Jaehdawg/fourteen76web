@@ -1,5 +1,5 @@
 'use strict';
-export const mainUrl: string = "http://localhost:1476/";
+export const mainUrl: string = "http://fourteen76.com/";
 export const shareImgUrl: string = mainUrl + 'images/share/';
 export const faceShare: string = "https://www.facebook.com/sharer/sharer.php?u=http%3A//fourteen76.com/";
 export const googleShare: string = "https://plus.google.com/share?url=http://www.fourteen76.com/";

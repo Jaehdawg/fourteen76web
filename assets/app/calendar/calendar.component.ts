@@ -15,8 +15,8 @@ export class CalendarComponent implements OnInit {
       {property: 'og:description', content: `Keep up with local art, music, and community events in the Birmingham area.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'fourteen76.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: "Calendar | Fourteen76"},
       {name: 'twitter:description', content: `Keep up with local art, music, and community events in the Birmingham area.`},

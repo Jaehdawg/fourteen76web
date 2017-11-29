@@ -15,8 +15,8 @@ export class CrackerPackers implements OnInit {
       {property: 'og:description', content: `The iconic Carr's of Carlisle factory has been synonymous with the city for nearly two hundred years. Home to the famous Carr's Table Water Biscuit as well as other British classics, Custard Creams, Bourbons, Ginger Nuts and many others under the McVitie's, Jacobs', Crawford's and Carr's brands.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'crackerpackers.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'crackerpackers.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `The iconic Carr's of Carlisle factory has been synonymous with the city for nearly two hundred years. Home to the famous Carr's Table Water Biscuit as well as other British classics, Custard Creams, Bourbons, Ginger Nuts and many others under the McVitie's, Jacobs', Crawford's and Carr's brands.`},

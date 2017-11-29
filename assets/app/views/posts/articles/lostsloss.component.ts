@@ -15,8 +15,8 @@ export class LostSloss implements OnInit {
       {property: 'og:description', content: `Underneath the looming skeleton that once was Birmingham’s bloodline a two day festival took place that attracted everyone from cross dressers in appropriated Native American war bonnets to caucasian dads in khakis. All gathered at the altar of music to see how much beer could be consumed and then sweated out under the glaring southern sun.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'sloss.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'sloss.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Underneath the looming skeleton that once was Birmingham’s bloodline a two day festival took place that attracted everyone from cross dressers in appropriated Native American war bonnets to caucasian dads in khakis. All gathered at the altar of music to see how much beer could be consumed and then sweated out under the glaring southern sun.`},

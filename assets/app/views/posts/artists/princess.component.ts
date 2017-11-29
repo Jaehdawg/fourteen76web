@@ -25,8 +25,8 @@ export class Princess implements OnInit {
       {property: 'og:description', content: `The girls are putting on their faces in the bathroom while I’m crouching on the wooden floor and the afternoon sun starts raising floodlights on the space I used to call my bedroom. I causally chew on the wooden tip of my hand fan and check the time. We’re running behind, but it was to be expected: The girls are new to Alabama­­, let alone Birmingham­­, so finding their materials would have understandably taken a good chunk of time.`},
       {property: 'og:type', content: "article"},
       {property: 'og:url', content: global.mainUrl + this.pageUrl},
-      {property: 'og:image', content: global.shareImgUrl + 'princess.jpg'}
-      {property: 'og:site_name', content: 'Fourteen76'}
+      {property: 'og:image', content: global.shareImgUrl + 'princess.jpg'},
+      {property: 'og:site_name', content: 'Fourteen76'},
       {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `The girls are putting on their faces in the bathroom while I’m crouching on the wooden floor and the afternoon sun starts raising floodlights on the space I used to call my bedroom. I causally chew on the wooden tip of my hand fan and check the time. We’re running behind, but it was to be expected: The girls are new to Alabama­­, let alone Birmingham­­, so finding their materials would have understandably taken a good chunk of time.`},

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { NgForm } from "@angular/forms";
 
 import {Email} from './email.model';
@@ -11,7 +11,7 @@ import {Location} from '@angular/common';
   templateUrl: 'email.component.html'
 })
 
-export class SubscribeElement implements OnInit {
+export class SubscribeElement {
   constructor(private emailService: EmailService, private _location: Location) {}
   formDisplay: boolean = false;
 
