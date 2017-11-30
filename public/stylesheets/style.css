@@ -19,6 +19,7 @@ font-family: 'Lora', serif;
 
 body {
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 button, a {
   cursor: pointer;
@@ -1140,6 +1141,9 @@ input, select, textarea,{
   .filterContainer {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+  .filterContainer li {
+    width: 50%;
   }
   .col {
     width: 100% !important;
