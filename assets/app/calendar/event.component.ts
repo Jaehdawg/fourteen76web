@@ -28,13 +28,13 @@ export class EventComponent implements AfterContentChecked, OnInit {
   }
   ngOnInit(){
     if(this.message.month == "1"){
-        return this.message.month = "January";
+        return this.message.month = "Jan";
       } else if(this.message.month == "2"){
-        return this.message.month = "February";
+        return this.message.month = "Feb";
       } else if(this.message.month == "3"){
-        return this.message.month = "March";
+        return this.message.month = "Mar";
       } else if(this.message.month == "4"){
-        return this.message.month = "April";
+        return this.message.month = "Apr";
       } else if(this.message.month == "5"){
         return this.message.month = "May";
       } else if(this.message.month == "6"){
@@ -42,15 +42,15 @@ export class EventComponent implements AfterContentChecked, OnInit {
       } else if(this.message.month == "7"){
         return this.message.month = "July";
       } else if(this.message.month == "8"){
-        return this.message.month = "August";
+        return this.message.month = "Aug";
       } else if(this.message.month == "9"){
-        return this.message.month = "September";
+        return this.message.month = "Sept";
       } else if(this.message.month == "10"){
-        return this.message.month = "October";
+        return this.message.month = "Oct";
       } else if(this.message.month == "11"){
-        return this.message.month = "November";
+        return this.message.month = "Nov";
       } else if(this.message.month == "12"){
-        return this.message.month = "December";
+        return this.message.month = "Dec";
       } else {
         return this.message.month = "Month";
       };
