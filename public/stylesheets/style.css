@@ -74,20 +74,6 @@ html, body, material-app, mat-sidenav-container, #container {
   align-items: center;
 }
 /*Navigation Menu*/
-.betaMsg {
-  position: fixed;
-  width: 100%;
-  height: 20px;
-  z-index: 990;
-  text-align: center;
-  background-color: #f2b1bd;
-}
-.betaMsg p {
-  color: white;
-  margin-top: 0;
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 15px;
-}
 .desktopNav {
   display: -webkit-flex; /* Safari */
   display: flex;
@@ -100,7 +86,7 @@ html, body, material-app, mat-sidenav-container, #container {
   -moz-box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
   box-shadow: 0px 2px 8px 0px rgba(219,219,219,1);
   z-index: 990;
-  top: 20px;
+  top: 0;
   left: 0;
 }
 .navContentLeft {
@@ -1146,6 +1132,9 @@ input, select, textarea,{
 
 }*/
 @media (max-width: 763px) {
+  body {
+    overflow-x: hidden;
+  }
   .item {
     min-width: 100% !important;
   }
