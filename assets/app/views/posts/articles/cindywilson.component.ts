@@ -11,13 +11,10 @@ export class CindyWilson implements OnInit {
   constructor(private titleService: Title, private meta: Meta) {
     this.meta.addTags([
       {name: 'description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
-      {name: 'og:title', content: this.postTitle},
-      {name: 'og:description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
-      {name: 'og:type', content: "article"},
-      {name: 'og:url', content: global.mainUrl + this.pageUrl},
-      {name: 'og:image', content: global.shareImgUrl + 'cindywilson.jpg'},
-      {name: 'og:site_name', content: 'Fourteen76'},
-      {name: 'twitter:card', content: 'summary_large_image'},
+      {property: 'og:title', content: this.postTitle},
+      {property: 'og:description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
+      {property: 'og:url', content: global.mainUrl + this.pageUrl},
+      {property: 'og:image', content: global.shareImgUrl + 'cindywilson.jpg'},
       {name: 'twitter:title', content: this.postTitle},
       {name: 'twitter:description', content: `Cindy and her brother Ricky Wilson were among the founding members of Athens, Georgia’s B-52s. The band is currently celebrating its 40 th anniversary, and simultaneously, Cindy is celebrating the release of her first solo record, Change.`},
       {name: 'twitter:image', content: global.shareImgUrl + 'cindywilson.jpg'}
