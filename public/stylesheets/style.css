@@ -1132,9 +1132,6 @@ input, select, textarea,{
 
 }*/
 @media (max-width: 763px) {
-  body {
-    overflow-x: hidden;
-  }
   .item {
     min-width: 100% !important;
   }
@@ -1178,6 +1175,7 @@ input, select, textarea,{
     width: 100% ;
   }
   .article {
+    overflow-x: hidden;
     padding-left: 10px;
     padding-right: 10px;
     width: 95%;
