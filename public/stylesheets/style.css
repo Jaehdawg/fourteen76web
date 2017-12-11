@@ -1163,6 +1163,7 @@ input, select, textarea,{
     padding-left: 0;
   }
   .pageContainer {
+    overflow-x: hidden;
     padding: 55px 15px;
   }
   .headImage {
