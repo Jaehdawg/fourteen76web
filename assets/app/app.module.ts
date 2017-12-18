@@ -48,6 +48,8 @@ import {ZypComponent} from './views/posts/articles/zyp.component';
 import {HeirloomComponent} from './views/posts/articles/heirloom.component';
 import {CarrigansComponent} from './views/posts/articles/carrigans.component';
 import {CindyWilson} from './views/posts/articles/cindywilson.component';
+import {Shame} from './views/posts/articles/shame.component';
+
 //photography
 import {BikeJoust} from './views/posts/photography/joust.component';
 import {Gon} from './views/posts/photography/gon.component';
@@ -83,6 +85,7 @@ import {SkateFund} from './views/posts/photography/skatefund.component';
 import {Untitled} from './views/posts/photography/untitled.component';
 import {LaundryPunk} from './views/posts/photography/laundrypunk.component';
 import {Twelve} from './views/posts/photography/twelveweeks.component';
+import {Snow} from './views/posts/photography/snow.component';
 
 //artists
 import {Merrilee} from './views/posts/artists/merrilee.component';
@@ -109,6 +112,9 @@ import {DonGero} from './views/posts/videos/dongero.component';
 import {Boom} from './views/posts/videos/boom.component';
 import {Homeward} from './views/posts/videos/homeward.component';
 import {HeavyUser} from './views/posts/videos/heavyuser.component';
+
+//other
+import {WeAreOne} from './views/other/weareone.component';
 
 
 @NgModule({
@@ -200,10 +206,13 @@ import {HeavyUser} from './views/posts/videos/heavyuser.component';
     Colour,
     Girlpool,
     Twelve,
-    CindyWilson
+    CindyWilson,
+    WeAreOne,
+    Snow,
+    Shame
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: '1476-seo'}),
     HttpModule,
     routing,
     FormsModule,

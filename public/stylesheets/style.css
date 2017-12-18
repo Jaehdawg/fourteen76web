@@ -346,6 +346,9 @@ html, body, material-app, mat-sidenav-container, #container {
   padding-left: 15px;
   padding-top: 6px;
 }
+.colPost {
+  cursor: pointer;
+}
 .name {
   color: #1E1E1E;
   font-size: 18px;
@@ -429,6 +432,18 @@ html, body, material-app, mat-sidenav-container, #container {
 }
 .submitemails {
   text-align: center;
+}
+.guidehead a {
+  padding: 15px;
+  margin-top: 25px;
+  margin-bottom: 55px;
+  color: #f2b1bd;
+  font-size: 35px;
+  font-family: "Lora", sans-serif;
+  text-decoration: none;
+}
+.guidehead a:hover {
+  text-decoration: none;
 }
 .submitemailimg {
   display: -webkit-flex; /* Safari */

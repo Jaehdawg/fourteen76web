@@ -1,6 +1,7 @@
 import {Routes, RouterModule} from '@angular/router';
 
 //main components
+import {WeAreOne} from './views/other/weareone.component';
 import {ArtistsComponent} from './views/Mviews/artists.component';
 import {ArtistsTwoComponent} from './views/Mviews/artists2.component';
 import {HomeComponent} from './views/Mviews/home.component';
@@ -31,6 +32,7 @@ import {EroticaComponent} from './views/posts/articles/erotica.component';
 import {ZypComponent} from './views/posts/articles/zyp.component';
 import {HeirloomComponent} from './views/posts/articles/heirloom.component';
 import {CarrigansComponent} from './views/posts/articles/carrigans.component';
+import {Shame} from './views/posts/articles/shame.component';
 //photography
 import {BikeJoust} from './views/posts/photography/joust.component';
 import {Gon} from './views/posts/photography/gon.component';
@@ -66,6 +68,7 @@ import {SkateFund} from './views/posts/photography/skatefund.component';
 import {Untitled} from './views/posts/photography/untitled.component';
 import {LaundryPunk} from './views/posts/photography/laundrypunk.component';
 import {Twelve} from './views/posts/photography/twelveweeks.component';
+import {Snow} from './views/posts/photography/snow.component';
 
 //artists
 import {Merrilee} from './views/posts/artists/merrilee.component';
@@ -127,6 +130,7 @@ const APP_ROUTES: Routes = [
   {path: 'LivingColour', component: Colour},
   {path: 'Girlpool', component: Girlpool},
   {path: 'CindyWilson', component: CindyWilson},
+  {path: 'Shame', component: Shame},
 
   //Photography
   {path: 'BikeJoustV', component: BikeJoust},
@@ -163,8 +167,10 @@ const APP_ROUTES: Routes = [
   {path: 'Untitled', component: Untitled},
   {path: 'LaundryPunk', component: LaundryPunk},
   {path: 'TwelveWeeks', component: Twelve},
+  {path: 'SnowDay', component: Snow},
 
   //artists
+  {path: 'KatelynLedford', component: Katelyn},
   {path: 'MerrileeChalliss', component: Merrilee},
   {path: 'AmyVaughn', component: Amy},
   {path: 'MrMarbles', component: Marbles},
@@ -188,10 +194,9 @@ const APP_ROUTES: Routes = [
   {path: 'Boom', component: Boom},
   {path: 'HomewardBound', component: Homeward},
   {path: 'HeavyUser', component: HeavyUser},
-  {path: 'KatelynLedford', component: Katelyn},
 
-
-
+  //other
+  {path: 'weareone', component: WeAreOne},
 
 
 
