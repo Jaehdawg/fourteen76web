@@ -11,8 +11,5 @@
       "es5",
       "dom"
     ]
-  },
-  "exclude": [
-    "public/server.ts"
-  ]
+  }
 }

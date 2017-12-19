@@ -212,7 +212,7 @@ import {WeAreOne} from './views/other/weareone.component';
     Shame
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: '1476-seo'}),
+    BrowserModule,
     HttpModule,
     routing,
     FormsModule,

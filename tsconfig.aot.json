@@ -19,9 +19,5 @@
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit": true
-  },
-  "angularCompilerOptions": {                             // Here
-      "genDir": "./dist/ngfactory",
-      "entryModule": "./app/app.module#AppModule"
   }
 }
